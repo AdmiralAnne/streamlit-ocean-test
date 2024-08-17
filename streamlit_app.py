@@ -21,21 +21,26 @@ except FileNotFoundError:
   exit()
 
 
+# Create an empty DataFrame to store answers
+answers = pd.DataFrame(columns=['ID', 'answer'])
+
 # Display questions with radio buttons
-answers = {}
 for index, row in questions.iterrows():
   question_id = row['ID']
   question_text = row['question']
   answer = st.radio(f"Question {question_id}: {question_text}", options=[1, 2, 3, 4, 5],
-                     captions=[
-                         "Disagree strongly",
-                         "Disagree a little",
-                         "Neither agree nor disagree",
-                         "Agree a little",
-                         "Agree strongly"
-                     ],
-                     horizontal=False, key=question_id)
-  answers[question_id] = answer
+                    captions=[
+                        "Disagree strongly",
+                        "Disagree a little",
+                        "Neither agree nor disagree",
+                        "Agree a little",
+                        "Agree strongly"
+                    ],
+                    horizontal=False, key=question_id)
+
+  # Add answer and ID to the DataFrame
+  new_row = {'ID': question_id, 'answer': answer}
+  answers = answers_df.append(new_row, ignore_index=True)
 
 questions
 data
