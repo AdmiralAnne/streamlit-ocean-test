@@ -15,7 +15,7 @@ This test offers insights into your traits. Be honest!
 # Import the CSV dataset and read the file
 try:
   data = pd.read_csv("OCEAN_questions.csv")
-  questions = data.loc[:, ["ID", "question", "choice","factor"]]
+  questions = data.loc[:, ["ID", "question", "choice", "factor"]]
 except FileNotFoundError:
   st.error("Error: 'OCEAN_questions.csv' file not found. Please ensure the file exists in the same directory as your script.")
   exit()
@@ -44,7 +44,7 @@ def calculate_ocean_scores(df):
     reverse_items = reverse_questions[factor]
     normal_items = [x for x in range(1, df.shape[0] + 1) if x not in reverse_items]
 
-    # Reverse score for reverse items
+    # Reverse score for reverse items (using choice column directly)
     df.loc[df['ID'].isin(reverse_items), 'choice'] = 6 - df['choice']
 
     # Calculate factor score (handle potential missing values)
@@ -59,35 +59,28 @@ def calculate_ocean_scores(df):
   return ocean_scores
 
 # Display questions with radio buttons
-all_answers = {}
+all_answers = {}  # Not used for score calculation anymore
+
 for index, row in questions.iterrows():
   question_id = row['ID']
   question_text = row['question']
   answer = st.radio(f"Question {question_id}: {question_text}", options=[1, 2, 3, 4, 5],
-                     captions=[
-                         "Disagree strongly",
-                         "Disagree a little",
-                         "Neither agree nor disagree",
-                         "Agree a little",
-                         "Agree strongly"
-                     ],
-                     horizontal=False, key=question_id)
-  all_answers[question_id] = answer
+                    captions=[
+                        "Disagree strongly",
+                        "Disagree a little",
+                        "Neither agree nor disagree",
+                        "Agree a little",
+                        "Agree strongly"
+                    ],
+                    horizontal=False, key=question_id)
 
-all_answers
-df
+# No need to create a separate DataFrame from all_answers
 
-# Create a DataFrame from answers
-df = pd.DataFrame.from_dict(all_answers, orient='index', columns=['choice'])
-df['ID'] = questions['ID']
-df['question'] = questions['question']
-df['factor'] = questions['factor']
-
-# Calculate OCEAN scores
+# Calculate OCEAN scores directly using the 'choice' column in df
 ocean_scores = calculate_ocean_scores(df)
 
 # Display results
 st.success("Thank you for completing the test!")
 st.subheader("Your OCEAN Scores:")
 for factor, score in ocean_scores.items():
-    st.write(f"{factor}: {score:.2f}")
+  st.write(f"{factor}: {score:.2f}")
