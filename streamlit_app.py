@@ -198,7 +198,7 @@ with tab1:
 with tab2:
     for index, row in scores_df.iterrows():
         get_interpretation(row['Trait'], row['Score'])
-    st.info("**Remember:** These are general guidelines and **individual differences** exist. Let this serve be a high level view, not a one stop solution.")
+    st.info("**Remember:** These are general guidelines and **individual differences** exist. Let this serve as a high level overview of your traits, not a one stop solution.")
 
 with st.expander("Data"):
     st.text("Dataset and collections of your responses:")
