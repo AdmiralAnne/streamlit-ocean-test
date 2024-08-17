@@ -209,18 +209,10 @@ with st.expander("Raw Data, if you are interested"):
     ocean_scores
   
 with st.sidebar:
-    st.success('Some Extra Reading material on the big five model:')
-    st.markdown("""
-
-    ### link to websites:
-    1. [Simple Psychology - Big Five Personality](https://www.simplypsychology.org/big-five-personality.html)
+    st.success('Navigate to more pages using the above links ⬆️')
     
-    2. [Very well mind - How to Use the Big 5 Personality Traits](https://www.verywellmind.com/the-big-five-personality-dimensions-2795422)
-
-    """
-    )
 
 if st.button("Home"):
     st.switch_page("streamlit_app.py")
-if st.button("Page 1"):
-    st.switch_page("pages/page_2.py")
+if st.button("Read more"):
+    st.switch_page("pages/pages/further_reading.py")
