@@ -118,46 +118,46 @@ with st.expander("**Openness to Experience (O)**"):
 
 with st.expander("**Conscientiousness (C)**"):
     st.write("""  
-    Very Low (9-18): Individuals in this range may be more spontaneous, impulsive, and less focused on goals. They may struggle with organization and time management.
+    **Very Low (9-18):** Individuals in this range may be more spontaneous, impulsive, and less focused on goals. They may struggle with organization and time management.
 
-    Low (19-27): Relatively laid-back and easygoing, but can be inconsistent in their approach to tasks and responsibilities.
+    **Low (19-27):** Relatively laid-back and easygoing, but can be inconsistent in their approach to tasks and responsibilities.
 
-    Average (28-36): Generally organized and reliable, able to balance spontaneity with responsibility.
+    **Average (28-36):** Generally organized and reliable, able to balance spontaneity with responsibility.
 
-    High (37-45): Highly organized, disciplined, and goal-oriented individuals. They are likely to be dependable and hardworking.
+    **High (37-45):** Highly organized, disciplined, and goal-oriented individuals. They are likely to be dependable and hardworking.
     """)
 
 with st.expander("**Extraversion (E)**"):
     st.write("""  
-  Very Low (9-18): Individuals in this range tend to be introverted, preferring solitary activities or small groups. They may be seen as reserved or shy.
+    **Very Low (9-18):** Individuals in this range tend to be introverted, preferring solitary activities or small groups. They may be seen as reserved or shy.
 
-  Low (19-27): Moderate level of extraversion, enjoying social interaction but also valuing alone time. They may be seen as balanced or ambiverted.
+    **Low (19-27):** Moderate level of extraversion, enjoying social interaction but also valuing alone time. They may be seen as balanced or ambiverted.
 
-  Average (28-36): Outgoing and sociable individuals who enjoy being around people. They are likely to be assertive and enthusiastic.
+    **Average (28-36):** Outgoing and sociable individuals who enjoy being around people. They are likely to be assertive and enthusiastic.
 
-  High (37-45): Extremely extraverted, with a strong desire for social interaction and stimulation. They are often seen as energetic and charismatic.
-  """)
+    **High (37-45):** Extremely extraverted, with a strong desire for social interaction and stimulation. They are often seen as energetic and charismatic.
+    """)
 
 with st.expander("**Agreeableness (A)**"):
     st.write("""  
-    Very Low (9-18): Individuals in this range tend to be assertive, competitive, and focused on their own needs. They may be seen as skeptical or distrustful.
+    **Very Low (9-18):** Individuals in this range tend to be assertive, competitive, and focused on their own needs. They may be seen as skeptical or distrustful.
 
-    Low (19-27): Somewhat assertive and independent, but also able to cooperate with others. They might be seen as balanced in their approach to social interactions.
+    **Low (19-27):** Somewhat assertive and independent, but also able to cooperate with others. They might be seen as balanced in their approach to social interactions.
 
-    Average (28-36): Cooperative and considerate, valuing harmony in relationships. They are likely to be helpful and empathetic.
+    **Average (28-36):** Cooperative and considerate, valuing harmony in relationships. They are likely to be helpful and empathetic.
 
-    High (37-45): Extremely altruistic and empathetic, often prioritizing the needs of others over their own. They may be seen as overly accommodating.
+    **High (37-45):** Extremely altruistic and empathetic, often prioritizing the needs of others over their own. They may be seen as overly accommodating.
     """)
 
 with st.expander("**Neuroticism (N)**"):
     st.write("""  
-    Very Low (9-18): Emotionally stable and resilient, able to handle stress effectively. They may be seen as calm and collected.
+    **Very Low (9-18):** Emotionally stable and resilient, able to handle stress effectively. They may be seen as calm and collected.
 
-    Low (19-27): Generally emotionally stable, but may experience occasional mood swings or anxiety.
+    **Low (19-27):** Generally emotionally stable, but may experience occasional mood swings or anxiety.
 
-    Average (28-36): Prone to moderate levels of anxiety and emotional reactivity. They may experience stress and worry more frequently.
+    **Average (28-36):** Prone to moderate levels of anxiety and emotional reactivity. They may experience stress and worry more frequently.
 
-    High (37-45): High levels of neuroticism, characterized by anxiety, mood swings, and difficulty coping with stress.    
+    **High (37-45):** High levels of neuroticism, characterized by anxiety, mood swings, and difficulty coping with stress.    
     """)
 
 st.info("**Remember: These descriptions provide general guidelines and individual differences exist. It's essential to consider the specific context and purpose of the assessment when interpreting scores.**")
