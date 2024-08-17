@@ -22,7 +22,7 @@ except FileNotFoundError:
 
 
 # Display questions with radio buttons
-all_answers = {}
+answers = {}
 for index, row in questions.iterrows():
   question_id = row['ID']
   question_text = row['question']
@@ -35,54 +35,24 @@ for index, row in questions.iterrows():
                          "Agree strongly"
                      ],
                      horizontal=False, key=question_id)
-  all_answers[question_id] = answer
+  answers[question_id] = answer
 
 questions
 data
-all_answers
+answers
 
+# Manual calculations for OCEAN scores
+extraversion_score = (answers['1'] + answers['3'] + answers['4'] + answers['6'] + answers['8']) - (answers['2'] + answers['5'] + answers['7'] + answers['9'])
+neuroticism_score = (answers['10'] + answers['12'] + answers['13'] + answers['15'] + answers['17']) - (answers['11'] + answers['14'] + answers['16'])
+openness_score = (answers['19'] + answers['20'] + answers['21'] + answers['23']) - (answers['18'] + answers['22'] + answers['24'] + answers['25'])
+agreeableness_score = (answers['27'] + answers['29'] + answers['30'] + answers['32']) - (answers['26'] + answers['28'] + answers['31'] + answers['33'])
+conscientiousness_score = (answers['34'] + answers['36'] + answers['39'] + answers['40']) - (answers['35'] + answers['37'] + answers['38'] + answers['41'])
 
-import pandas as pd
-
-def calculate_ocean_scores(answers):
-  """Calculates OCEAN scores based on provided answers.
-
-  Args:
-    answers: A dictionary of question-answer pairs.
-
-  Returns:
-    A Pandas DataFrame with factors and scores.
-  """
-
-  # Define reverse score questions for each factor
-  reverse_questions = {
-      'Extraversion': [2, 5, 7, 9],
-      'Neuroticism': [11, 14, 16],
-      'Openness': [18, 22, 24, 25],
-      'Agreeableness': [26, 28, 31, 33],
-      'Conscientiousness': [35, 37, 38, 41]
-  }
-
-  def calculate_factor_score(factor, answers):
-    reverse_items = reverse_questions[factor]
-    normal_items = [int(q) for q in answers.keys() if int(q) not in reverse_items]
-
-    # Reverse score for reverse items
-    for q in reverse_items:
-      answers[str(q)] = 6 - answers[str(q)]
-
-    # Calculate factor score
-    factor_score = sum(answers[str(q)] for q in normal_items) / len(normal_items)
-    return factor_score
-
-  # Calculate scores for each factor
-  ocean_scores = {}
-  for factor in reverse_questions.keys():
-    ocean_scores[factor] = calculate_factor_score(factor, answers)
-
-  # Create DataFrame
-  df = pd.DataFrame({'factors': list(ocean_scores.keys()), 'scores': list(ocean_scores.values())})
-  return df
-
-final = calculate_ocean_scores(all_answers)
-final
+# Display results
+st.success("Thank you for completing the test!")
+st.subheader("Your OCEAN Scores:")
+st.write("Extraversion:", extraversion_score)
+st.write("Neuroticism:", neuroticism_score)
+st.write("Openness:", openness_score)
+st.write("Agreeableness:", agreeableness_score)
+st.write("Conscientiousness:", conscientiousness_score)
