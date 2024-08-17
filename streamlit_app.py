@@ -101,14 +101,6 @@ def calculate_ocean_scores(df):
 ocean_scores = calculate_ocean_scores(answers_df)
 ocean_scores
 
-# Display results
-st.success("Thank you for completing the test!")
-st.subheader("Your OCEAN Scores:")
-st.write("Extraversion:", extraversion_score)
-st.write("Neuroticism:", neuroticism_score)
-st.write("Openness:", openness_score)
-st.write("Agreeableness:", agreeableness_score)
-st.write("Conscientiousness:", conscientiousness_score)
 
 st.info(""" 
 
