@@ -261,9 +261,15 @@ def get_interpretation(trait, score):
                 **High (37-45):** Your high levels of neuroticism may manifest as anxiety, mood swings, and difficulty coping with stress. While this emotional sensitivity can enhance your empathy and creativity, it may also lead to challenges in maintaining emotional stability. Consider seeking support from mental health professionals or developing mindfulness practices to enhance your emotional resilience and well-being.
                 """)
 
+# Iterate through rows using iloc
+for i in range(len(scores_df)):
+    new_df = df.iloc[i:i+1, :]
+    new_df
+
 # Iterate through each row in the DataFrame and display the interpretation
 for index, row in scores_df.iterrows():
     scores_df
     index
     row
     get_interpretation(row['Trait'], row['Score'])
+
