@@ -106,14 +106,13 @@ st.info("""
 
 with st.expander("**Openness to Experience (O)**"):
     st.write("""
-    
-    **Very Low (9-18):** Individuals in this range tend to be more traditional, practical, and down-to-earth. They may be less interested in new ideas or experiences and prefer familiar routines.
-    
-    **Low (19-27):** Somewhat conventional, but open to new experiences within their comfort zone. They might be cautious about trying new things but adaptable to change.
+Very Low (9-18): You are likely to value tradition and practicality, often finding comfort in the familiar and routine. This preference might make you less inclined to seek out novel experiences or ideas, which can be beneficial in environments that require consistency and reliability. However, it may also limit your exposure to diverse perspectives and innovative solutions. Consider gradually introducing new experiences into your life to enhance creativity and adaptability.
 
-    **Average (28-36):** Balanced approach to new experiences. They are open to learning and trying new things but also appreciate routine and stability.
+Low (19-27): While you may lean towards conventionality, you are open to exploring new experiences within your comfort zone. This cautious approach allows you to adapt to change without feeling overwhelmed. You might benefit from occasionally stepping outside your comfort zone to foster personal growth and broaden your horizons, which can lead to unexpected opportunities and insights.
 
-    **High (37-45):** Highly imaginative and curious individuals. They are open to new ideas and experiences, often seeking out intellectual stimulation and artistic pursuits.
+Average (28-36): You strike a balance between embracing new experiences and valuing routine. This equilibrium allows you to enjoy the stability of familiar patterns while remaining open to learning and growth. You are likely to appreciate both intellectual stimulation and the comfort of routine, making you adaptable in various situations. Consider leveraging this balance to explore new interests while maintaining a sense of stability.
+
+High (37-45): Your high level of openness suggests a strong curiosity and imagination, often driving you to seek out intellectual and artistic pursuits. You thrive on new ideas and experiences, which can lead to innovative thinking and creative problem-solving. While this trait can be a significant asset, be mindful of the potential for becoming easily bored with routine tasks. Channel your curiosity into projects that challenge and inspire you.
     """)
 
 with st.expander("**Conscientiousness (C)**"):
@@ -167,27 +166,3 @@ with st.expander("Results Dataframe"):
     data
     answers_df
     ocean_scores
-
-
-# Interpretations based on scores_df
-def get_interpretation(trait, score):
-    interpretation = ""
-    if trait == "Openness to Experience (O)":
-        if score >= 9 and score <= 18:
-            interpretation = "Very Low (9-18): You are likely to value tradition and practicality, often finding comfort in the familiar and routine. This preference might make you less inclined to seek out novel experiences or ideas, which can be beneficial in environments that require consistency and reliability. However, it may also limit your exposure to diverse perspectives and innovative solutions. Consider gradually introducing new experiences into your life to enhance creativity and adaptability."
-        elif score >= 19 and score <= 27:
-            interpretation = "Low (19-27): While you may lean towards conventionality, you are open to exploring new experiences within your comfort zone. This cautious approach allows you to adapt to change without feeling overwhelmed. You might benefit from occasionally stepping outside your comfort zone to foster personal growth and broaden your horizons, which can lead to unexpected opportunities and insights."
-        elif score >= 28 and score <= 36:
-            interpretation = "Average (28-36): You strike a balance between embracing new experiences and valuing routine. This equilibrium allows you to enjoy the stability of familiar patterns while remaining open to learning and growth. You are likely to appreciate both intellectual stimulation and the comfort of routine, making you adaptable in various situations. Consider leveraging this balance to explore new interests while maintaining a sense of stability."
-        else:
-            interpretation = "High (37-45): Your high level of openness suggests a strong curiosity and imagination, often driving you to seek out intellectual and artistic pursuits. You thrive on new ideas and experiences, which can lead to innovative thinking and creative problem-solving. While this trait can be a significant asset, be mindful of the potential for becoming easily bored with routine tasks. Channel your curiosity into projects that challenge and inspire you."
-    # ... add interpretations for other traits
-
-    return interpretation
-
-for index, row in scores_df.iterrows():
-    trait = row['Trait']
-    score = row['Score']
-    interpretation = get_interpretation(trait, score)
-    with st.expander(trait):
-        st.info(interpretation)
