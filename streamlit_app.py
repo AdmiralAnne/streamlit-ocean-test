@@ -11,7 +11,7 @@ df = pd.read_csv("OCEAN_questions - give me the sheet here as a table.csv", name
 def create_questionnaire(df):
     for index, row in df.iterrows():
         question = row['question']
-        choice_text = st.radio(f"Question {index+1}: {question}",
+        choice_text = st.radio(f"Question: {question}",
                                 ("1. Disagree strongly",
                                  "2. Disagree a little",
                                  "3. Neither agree nor disagree",
