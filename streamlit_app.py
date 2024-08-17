@@ -17,6 +17,5 @@ for index, row in df.iterrows():
                              "4. Agree a little",
                              "5. Agree strongly"))
     df.loc[index, 'choice'] = int(choice_text[0])  # Extract the number directly
-
-df = create_questionnaire(df.copy())  # Avoid modifying original dataframe
+df
 st.success("You've completed the OCEAN Test!")
