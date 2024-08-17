@@ -21,20 +21,15 @@ def create_questionnaire(df):
                 "5. Agree strongly"
             ]
         )
-        df.loc[index, 'choice'] = int(choice[0])  # Extract the number from the choice string
+        df.loc[index, 'choice'] = int(choice[0])  # Extract the number from the choice 
+    df
 
     return df
 
 def main():
-    # Assuming your DataFrame is named 'df' and has 'question' and 'choice' columns
-    df = pd.read_csv("your_data.csv")  # Replace with your data source
 
     df = create_questionnaire(df)
 
-    # Do something with the completed DataFrame, e.g., save it
-    df.to_csv("completed_questionnaire.csv", index=False)
 
 if __name__ == "__main__":
     main()
-
-main()
