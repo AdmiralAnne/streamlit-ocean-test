@@ -168,9 +168,31 @@ with st.expander("Results Dataframe"):
     answers_df
     ocean_scores
 
+for trait, score in ocean_traits.items():
+    with st.expander(trait):
+        if score >= 9 and score <= 18:
+            st.info(f"**Very Low ({score}):**\n"
+                   "* You are likely to value tradition and practicality, often finding comfort in the familiar and routine. This preference might make you less inclined to seek out novel experiences or ideas, which can be beneficial in environments that require consistency and reliability. However, it may also limit your exposure to diverse perspectives and innovative solutions. Consider gradually introducing new experiences into your life to enhance creativity and adaptability.")
+        elif score >= 19 and score <= 27:
+            st.info(f"**Low ({score}):**\n"
+                   "* While you may lean towards conventionality, you are open to exploring new experiences within your comfort zone. This cautious approach allows you to adapt to change without feeling overwhelmed. You might benefit from occasionally stepping outside your comfort zone to foster personal growth and broaden your horizons, which can lead to unexpected opportunities and insights.")
+        elif score >= 28 and score <= 36:
+            st.info(f"**Average ({score}):**\n"
+                   "* You strike a balance between embracing new experiences and valuing routine. This equilibrium allows you to enjoy the stability of familiar patterns while remaining open to learning and growth. You are likely to appreciate both intellectual stimulation and the comfort of routine, making you adaptable in various situations. Consider leveraging this balance to explore new interests while maintaining a sense of stability.")
+        else:
+            st.info(f"**High ({score}):**\n"
+                   "* Your high level of openness suggests a strong curiosity and imagination, often driving you to seek out intellectual and artistic pursuits. You thrive on new ideas and experiences, which can lead to innovative thinking and creative problem-solving. While this trait can be a significant asset, be mindful of the potential for becoming easily bored with routine tasks. Channel your curiosity into projects that challenge and inspire you.")
 
-
-
-
-
-
+    with st.expander("Conscientiousness (C)"):
+        if score >= 9 and score <= 18:
+            st.info(f"**Very Low ({score}):**\n"
+                   "* You may find yourself acting spontaneously and impulsively, often prioritizing immediate gratification over long-term goals. This can lead to challenges with organization and time management, potentially impacting your ability to meet responsibilities. Consider developing strategies to enhance your focus and discipline, such as setting clear goals and creating structured routines to improve productivity and reliability.")
+        elif score >= 19 and score <= 27:
+            st.info(f"**Low ({score}):**\n"
+                   "* Your laid-back and easygoing nature allows you to adapt to changing circumstances, but it may also result in inconsistency in task completion. While this flexibility can be advantageous in dynamic environments, it might hinder your ability to achieve long-term objectives. Strive to find a balance between spontaneity and responsibility by setting achievable goals and maintaining a flexible yet structured approach to tasks.")
+        elif score >= 28 and score <= 36:
+            st.info(f"**Average ({score}):**\n"
+                   "* You exhibit a balanced approach to conscientiousness, effectively managing responsibilities while allowing room for spontaneity. This makes you reliable and adaptable, capable of handling both planned and unexpected situations. Use this balance to your advantage by setting realistic goals and maintaining a flexible mindset, which can enhance your ability to navigate various challenges.")
+        else:
+            st.info(f"**High ({score}):**\n"
+                   "* Your high conscientiousness indicates a strong sense of discipline and organization, often making you dependable and goal-oriented. You likely excel in structured environments where attention to detail and perseverance are valued. While this trait is beneficial for achieving success, be cautious of becoming overly rigid or perfectionistic. Allow yourself moments of spontaneity to foster creativity and prevent burnout.")
