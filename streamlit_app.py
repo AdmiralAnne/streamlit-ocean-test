@@ -113,7 +113,7 @@ High Scores (16-21): Cooperative, trusting, empathetic, and considerate of other
 Average Scores (6-15): Balanced between cooperation and assertiveness.
 Low Scores (-15 to 5): Competitive, suspicious, and assertive, with a focus on personal goals.
 
-Conscientiousness:
+Conscientiousness: 
 High Scores (16-21): Organized, disciplined, reliable, and hardworking.
 Average Scores (6-15): Moderately organized and reliable.
 Low Scores (-15 to 5): Spontaneous, careless, and less focused on goals.
