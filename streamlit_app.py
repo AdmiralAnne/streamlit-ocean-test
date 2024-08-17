@@ -5,7 +5,7 @@ st.title('OCEAN Test App')
 
 st.info('A minimal way to take the OCEAN Test and get insights into your personality!')
 
-df=pd.read-csv("OCEAN_questions - give me the sheet here as a table.csv")
+df=pd.read_csv("OCEAN_questions - give me the sheet here as a table.csv")
 
 def display_questions(df):
   """Displays questions with radio buttons for answers using Streamlit.
