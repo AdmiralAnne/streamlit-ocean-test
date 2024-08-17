@@ -168,7 +168,7 @@ with st.expander("Results Dataframe"):
     answers_df
     ocean_scores
 
-for trait, score in ocean_traits.items():
+for trait, score in ocean_scores.items():
     with st.expander(trait):
         if score >= 9 and score <= 18:
             st.info(f"**Very Low ({score}):**\n"
