@@ -77,7 +77,7 @@ for index, row in questions.iterrows():
 # No need to create a separate DataFrame from all_answers
 
 # Calculate OCEAN scores directly using the 'choice' column in df
-ocean_scores = calculate_ocean_scores(df)
+ocean_scores = calculate_ocean_scores(data)
 
 # Display results
 st.success("Thank you for completing the test!")
