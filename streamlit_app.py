@@ -49,6 +49,7 @@ def calculate_ocean_scores(df):
 
     # Calculate factor score (handle potential missing values)
     factor_score = df[df['factor'] == factor]['choice'].mean(skipna=True)
+    print(score)
     return factor_score
 
   # Calculate scores for each factor
