@@ -263,7 +263,7 @@ def get_interpretation(trait, score):
 
 # Iterate through rows using iloc
 for i in range(len(scores_df)):
-    new_df = df.iloc[i:i+1, :]
+    new_df = scores_df.iloc[i:i+1, :]
     new_df
 
 # Iterate through each row in the DataFrame and display the interpretation
