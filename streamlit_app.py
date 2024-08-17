@@ -202,9 +202,7 @@ tab1, tab2 = st.tabs(["Score Table", "Insights"])
 
 with tab1:
     scores_df
-    st.metric(
-    label="Openness", value=scores_df.iloc[0:0]
-    )
+
 with tab2:
     for index, row in scores_df.iterrows():
         get_interpretation(row['Trait'], row['Score'])
