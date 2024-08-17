@@ -40,6 +40,26 @@ for index, row in questions.iterrows():
 questions
 data
 all_answers
+
+def dict_to_dataframe(data_dict):
+  """Converts a dictionary to a Pandas DataFrame.
+
+  Args:
+    data_dict: A dictionary where keys are question IDs and values are answers.
+
+  Returns:
+    A Pandas DataFrame with 'ID' and 'answer' columns.
+  """
+
+  # Convert the dictionary to a list of tuples
+  data = [(k, v) for k, v in data_dict.items()]
+
+  # Create a DataFrame from the list of tuples
+  df = pd.DataFrame(data, columns=['ID', 'answer'])
+
+  return df
+
+
 answers = dict_to_dataframe(all_answers)
 answers
 
