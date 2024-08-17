@@ -190,7 +190,7 @@ def get_interpretation(trait, score):
                 st.write("""
                 **High (37-45):** Your high levels of neuroticism may manifest as anxiety, mood swings, and difficulty coping with stress. While this emotional sensitivity can enhance your empathy and creativity, it may also lead to challenges in maintaining emotional stability. Consider seeking support from mental health professionals or developing mindfulness practices to enhance your emotional resilience and well-being.
                 """)
-    st.write("Further Reading: https://bigfive-test.com/articles/neuroticism")
+            st.write("Further Reading: https://bigfive-test.com/articles/neuroticism")
 
 tab1, tab2 = st.tabs(["Score Table", "Insights"])
 
