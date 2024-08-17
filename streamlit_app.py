@@ -64,12 +64,21 @@ answers_df = dict_to_dataframe(all_answers)
 answers_df
 
 
-# Manual calculations for OCEAN scores (using DataFrame methods)
+# Manual calculations for OCEAN scores
 extraversion_score = (answers_df[answers_df['ID'].isin([1, 3, 4, 6, 8])]['answer'].sum() -
                        answers_df[answers_df['ID'].isin([2, 5, 7, 9])]['answer'].sum())
+
 neuroticism_score = (answers_df[answers_df['ID'].isin([10, 12, 13, 15, 17])]['answer'].sum() -
                        answers_df[answers_df['ID'].isin([11, 14, 16])]['answer'].sum())
-# ... similar calculations for other scores
+
+openness_score = (answers_df[answers_df['ID'].isin([19, 20, 21, 23])]['answer'].sum() -
+                   answers_df[answers_df['ID'].isin([18, 22, 24, 25])]['answer'].sum())
+
+agreeableness_score = (answers_df[answers_df['ID'].isin([27, 29, 30, 32])]['answer'].sum() -
+                       answers_df[answers_df['ID'].isin([26, 28, 31, 33])]['answer'].sum())
+
+conscientiousness_score = (answers_df[answers_df['ID'].isin([34, 36, 39, 40])]['answer'].sum() -
+                           answers_df[answers_df['ID'].isin([35, 37, 38, 41])]['answer'].sum())
 
 # Display results
 st.success("Thank you for completing the test!")
