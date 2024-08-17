@@ -43,5 +43,5 @@ def display_questions(df):
 
   return df
 
-df = display_questions(df.copy())  # Avoid modifying original DataFrame
+df = display_questions(questions.copy())  # Avoid modifying original DataFrame
 df
