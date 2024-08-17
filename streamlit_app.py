@@ -94,16 +94,6 @@ scores_df = dict_to_dataframe(ocean_scores)
 new_columns = ['Trait', 'Score']
 scores_df.columns = new_columns
 
-
-tab1, tab2 = st.tabs(["Score Table", "Insights"])
-
-with tab1:
-    scores_df
-with tab2:
-    st.info("**Remember:** These descriptions provide general guidelines and individual differences exist. It's essential to consider the specific context and purpose of the assessment when interpreting scores.")
-    for index, row in scores_df.iterrows():
-        get_interpretation(row['Trait'], row['Score'])
-
 # Function to get the interpretation based on the score
 def get_interpretation(trait, score):
     if trait == "Openness":
@@ -201,9 +191,14 @@ def get_interpretation(trait, score):
                 **High (37-45):** Your high levels of neuroticism may manifest as anxiety, mood swings, and difficulty coping with stress. While this emotional sensitivity can enhance your empathy and creativity, it may also lead to challenges in maintaining emotional stability. Consider seeking support from mental health professionals or developing mindfulness practices to enhance your emotional resilience and well-being.
                 """)
 
+tab1, tab2 = st.tabs(["Score Table", "Insights"])
 
-
-
+with tab1:
+    scores_df
+with tab2:
+    st.info("**Remember:** These descriptions provide general guidelines and individual differences exist. It's essential to consider the specific context and purpose of the assessment when interpreting scores.")
+    for index, row in scores_df.iterrows():
+        get_interpretation(row['Trait'], row['Score'])
 
 with st.expander("Data"):
     st.text("Dataset and collections of your responses:")
