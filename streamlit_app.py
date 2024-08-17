@@ -267,3 +267,4 @@ for i in range(len(scores_df)):
     new_df
     new_df['Trait']
     new_df['Score']
+    get_interpretation(new_df['Trait'],new_df['Score'])
