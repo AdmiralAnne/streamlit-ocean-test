@@ -262,11 +262,7 @@ def get_interpretation(trait, score):
                 """)
 
 # Iterate through each row in the DataFrame and display the interpretation
-for index, row in scores_df.iterrows():
-    # Transpose the DataFrame if necessary and reset the index
-    row = row.T.reset_index()
-
-    # Rename columns appropriately if needed
-    row.columns = ["Trait", "Score"]
-
+for index, row in scores_df:
+    index
+    row
     get_interpretation(row['Trait'], row['Score'])
