@@ -12,4 +12,4 @@ data
 questions=data.loc[:, ["ID", "question"]]
 questions
 
-st.radio("Question number 1", "Option 1", index=0, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, horizontal=False, captions=None, label_visibility="visible")
+st.radio("Question number 1", "One,Two,Three", index=0, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, horizontal=False, captions=None, label_visibility="visible")
