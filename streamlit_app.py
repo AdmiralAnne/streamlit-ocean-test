@@ -55,3 +55,47 @@ df = display_questions(questions.copy())  # Avoid modifying original DataFrame
 
 with st.expander("Your Results - Open after all 41 questions only/-"):
     df
+
+
+import pandas as pd
+
+def calculate_ocean_scores(df):
+  """Calculates OCEAN scores based on the provided DataFrame.
+  Returns: A dictionary containing the OCEAN scores.
+  """
+
+  # Define reverse score questions for each factor
+  reverse_questions = {
+      'Extraversion': [2, 5, 7, 9],
+      'Neuroticism': [11, 14, 16],
+      'Openness': [18, 22, 24, 25],
+      'Agreeableness': [26, 28, 31, 33],
+      'Conscientiousness': [35, 37, 38, 41]
+  }
+
+  # Function to calculate scores for a factor
+  def calculate_factor_score(factor, df):
+    reverse_items = reverse_questions[factor]
+    normal_items = [x for x in range(1, df.shape[0] + 1) if x not in reverse_items]
+
+    # Reverse score for reverse items
+    df.loc[df['ID'].isin(reverse_items), 'choice'] = 6 - df['choice']
+
+    # Calculate factor score
+    factor_score = df[df['factor'] == factor]['choice'].mean()
+    return factor_score
+
+  # Calculate scores for each factor
+  ocean_scores = {}
+  for factor in ['Extraversion', 'Neuroticism', 'Openness', 'Agreeableness', 'Conscientiousness']:
+    ocean_scores[factor] = calculate_factor_score(factor, df)
+
+  return ocean_scores
+
+# Example usage:
+# Assuming df is your DataFrame with columns 'ID', 'question', 'factor', and 'choice'
+ocean_scores = calculate_ocean_scores(df)
+
+# Print the results
+for factor, score in ocean_scores.items():
+  print(f"Your {factor} score is: {score:.2f}")
