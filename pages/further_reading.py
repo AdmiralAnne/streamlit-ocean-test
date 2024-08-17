@@ -11,5 +11,7 @@ st.markdown("""
 
     4. [Big Five Test - Test/Read more](https://bigfive-test.com/)
 
+    5. [Truity - Individual Traits test](https://www.truity.com/view/tests/big-five-personality)
+
     """
     )
