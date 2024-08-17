@@ -95,7 +95,7 @@ General Interpretations for OCEAN Traits
 
 * **Openness to Experience (Openness)**:  
     * **Very High Score (16-21):** Highly imaginative and intellectually curious, with a strong preference for novelty and exploration. You're likely to be adventurous and open-minded in your approach to life.
-    * ** High Score (12-15):** Demonstrates a willingness to engage with new ideas and experiences. You are likely curious and flexible in your thinking.
+    * **High Score (12-15):** Demonstrates a willingness to engage with new ideas and experiences. You are likely curious and flexible in your thinking.
     * **Average Score (-3-11):** Maintains a balance between openness and a preference for routine. You are likely to be adaptable but also value stability.
     * **Moderately Low Score (-8-2):** Prefers familiar environments and routines. You may be seen as practical and conservative in your outlook.
     * **Very Low Score (-15 to -7):** Highly conventional and resistant to change. You may be seen as closed-minded and traditional.
