@@ -205,3 +205,13 @@ with st.expander("Data"):
     data
     answers_df
     ocean_scores
+  
+with st.sidebar:
+    st.subheader('Some Extra Reading material on the big five model:')
+    st.markdown("""
+
+    ### link to websites:
+    1. (Simple Psychology - Big Five Personality)[https://www.simplypsychology.org/big-five-personality.html]
+    """
+
+    )
