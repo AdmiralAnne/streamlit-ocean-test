@@ -4,64 +4,30 @@ import pandas as pd
 st.title('OCEAN Test App')
 
 st.info("""
-This test offers insights into your traits. 
+This test offers insights into your traits. Be honest!
 
-  * Answer statements using a 1-5 scale (1 = disagree strongly, 5 = agree strongly)
-  * No time limit, answer thoughtfully and Honestly.
+* Answer statements using a 1-5 scale (1 = disagree strongly, 5 = agree strongly)
+* There is no time limit, answer thoughtfully.
 
+**Please answer all questions before submitting.**
 """)
 
-# Rest of your code for displaying questions...
-
-# import the csv dataset and read the file
-data=pd.read_csv("OCEAN_questions.csv")
-questions=data.loc[:, ["ID", "question","choice"]]
-
-with st.expander("Data"):
-    data
-    questions
-
-def display_questions(df):
-  """Displays questions one by one with radio buttons for answers and stores choices in DataFrame.
-    Returns: The modified DataFrame with user choices stored.
-  """
-
-  if 'current_question' not in st.session_state:
-    st.session_state.current_question = 0
-
-  if st.session_state.current_question < len(df):
-    current_question = st.session_state.current_question
-    question_id = df.loc[current_question, 'ID']
-    question_text = df.loc[current_question, 'question']
-    st.subheader(f"Question {question_id}: {question_text}")
-
-    answer = st.radio("Choose your answer:", options=[1, 2, 3, 4, 5], index=0, key=current_question,
-                       captions=[
-                           "Disagree strongly",
-                           "Disagree a little",
-                           "Neither agree nor disagree",
-                           "Agree a little",
-                           "Agree strongly"
-                       ],
-                       horizontal=False)
-    df.loc[current_question, 'choice'] = answer
-
-    if st.button('Next'):
-      st.session_state.current_question += 1
-
-  return df
-
-df = display_questions(questions.copy())  # Avoid modifying original DataFrame
-
-with st.expander("Your Results - Open after all 41 questions only/-"):
-    df
-
-
-import pandas as pd
+# Import the CSV dataset and read the file
+try:
+  data = pd.read_csv("OCEAN_questions.csv")
+  questions = data.loc[:, ["ID", "question", "choice"]]
+except FileNotFoundError:
+  st.error("Error: 'OCEAN_questions.csv' file not found. Please ensure the file exists in the same directory as your script.")
+  exit()
 
 def calculate_ocean_scores(df):
   """Calculates OCEAN scores based on the provided DataFrame.
-  Returns: A dictionary containing the OCEAN scores.
+
+  Args:
+    df: The DataFrame containing question data (ID, question, factor, choice).
+
+  Returns:
+    A dictionary containing the OCEAN scores.
   """
 
   # Define reverse score questions for each factor
@@ -81,21 +47,49 @@ def calculate_ocean_scores(df):
     # Reverse score for reverse items
     df.loc[df['ID'].isin(reverse_items), 'choice'] = 6 - df['choice']
 
-    # Calculate factor score
-    factor_score = df[df['factor'] == factor]['choice'].mean()
+    # Calculate factor score (handle potential missing values)
+    factor_score = df[df['factor'] == factor]['choice'].mean(skipna=True)
     return factor_score
 
   # Calculate scores for each factor
   ocean_scores = {}
   for factor in ['Extraversion', 'Neuroticism', 'Openness', 'Agreeableness', 'Conscientiousness']:
-    ocean_scores[factor] = calculate_factor_score(factor, df)
+    ocean_scores[factor] = calculate_factor_score(factor, df.copy())  # Avoid modifying original DataFrame
 
   return ocean_scores
 
-# Example usage:
-# Assuming df is your DataFrame with columns 'ID', 'question', 'factor', and 'choice'
-ocean_scores = calculate_ocean_scores(df)
+# Display questions with radio buttons
+all_answers = {}
+for index, row in questions.iterrows():
+  question_id = row['ID']
+  question_text = row['question']
+  answer = st.radio(f"Question {question_id}: {question_text}", options=[1, 2, 3, 4, 5],
+                     captions=[
+                         "Disagree strongly",
+                         "Disagree a little",
+                         "Neither agree nor disagree",
+                         "Agree a little",
+                         "Agree strongly"
+                     ],
+                     horizontal=False, key=question_id)
+  all_answers[question_id] = answer
 
-# Print the results
-for factor, score in ocean_scores.items():
-  print(f"Your {factor} score is: {score:.2f}")
+if st.button("Submit Answers"):
+  # Check if all questions are answered
+  if len(all_answers) != len(questions):
+    st.error("Please answer all questions before submitting.")
+  else:
+    # Create a DataFrame from answers
+    df = pd.DataFrame.from_dict(all_answers, orient='index', columns=['choice'])
+    df['ID'] = questions['ID']
+    df['question'] = questions['question']
+    df['factor'] = questions['factor']
+
+    # Calculate OCEAN scores
+    ocean_scores = calculate_ocean_scores(df)
+
+    # Display results
+    st.success("Thank you for completing the test!")
+    st.subheader("Your OCEAN Scores:")
+    for factor, score in ocean_scores.items():
+      st.write(f"{factor}: {score:.2f}")
