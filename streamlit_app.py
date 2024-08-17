@@ -9,5 +9,5 @@ st.info('A minimal way to take the OCEAN Test and get insights into your persona
 data=pd.read_csv("OCEAN_questions.csv")
 data
 
-questions=data['ID','question']
+questions=data[('ID','question')]
 questions
