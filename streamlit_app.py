@@ -91,7 +91,7 @@ def calculate_ocean_scores(df):
 
 ocean_scores = calculate_ocean_scores(answers_df)
 scores_df = dict_to_dataframe(ocean_scores)
-new_columns = ['Trait', 'Score ']
+new_columns = ['Trait', 'Score']
 scores_df.columns = new_columns
 scores_df
 
