@@ -101,25 +101,25 @@ General Interpretations for OCEAN Traits
     * **Very Low Score (-15 to -7):** Highly conventional and resistant to change. You may be seen as closed-minded and traditional.
 
 * **Conscientiousness:**  
-    Very High Score (16-21): Exceptionally organized and disciplined, with a strong sense of responsibility and goal-orientation. You likely exhibit perfectionism and a strong work ethic.
-    Moderately High Score (12-15): Demonstrates a good level of organization and time management. You are likely reliable and dependable.
-    Average Score (-3-11): Balances structure with flexibility. You may be adaptable but also capable of meeting deadlines.
-    Moderately Low Score (-8-2): Tends to be impulsive and disorganized. You may struggle with time management and meeting commitments.
-    Very Low Score (-15 to -7): Highly spontaneous and careless. You may have difficulty with planning and adhering to routines.            
+    * **Very High Score (16-21):** Exceptionally organized and disciplined, with a strong sense of responsibility and goal-orientation. You likely exhibit perfectionism and a strong work ethic.
+    * **Moderately High Score (12-15):** Demonstrates a good level of organization and time management. You are likely reliable and dependable.
+    * **Average Score (-3-11):** Balances structure with flexibility. You may be adaptable but also capable of meeting deadlines.
+    * **Moderately Low Score (-8-2):** Tends to be impulsive and disorganized. You may struggle with time management and meeting commitments.
+    * **Very Low Score (-15 to -7):** Highly spontaneous and careless. You may have difficulty with planning and adhering to routines.            
 
 * **Extraversion:**  
-    Very High Score (16-21): Extremely outgoing and energetic. You thrive in social settings and enjoy being the center of attention. You are likely assertive and enthusiastic.
-    Moderately High Score (12-15): Sociable and confident. You enjoy social interactions but also value alone time. You are likely to be assertive and expressive.
-    Average Score (-3-11): Balanced between introversion and extraversion. You can adapt to social situations but also enjoy solitude. You are likely to be versatile in social settings.
-    Moderately Low Score (-8-2): Prefers solitary activities and quiet environments. You may be seen as reserved or introverted.
-    Very Low Score (-15 to -7): Highly introverted and avoids social situations. You may be perceived as shy or reclusive
+    * **Very High Score (16-21):** Extremely outgoing and energetic. You thrive in social settings and enjoy being the center of attention. You are likely assertive and enthusiastic.
+    * **Moderately High Score (12-15):** Sociable and confident. You enjoy social interactions but also value alone time. You are likely to be assertive and expressive.
+    * **Average Score (-3-11):** Balanced between introversion and extraversion. You can adapt to social situations but also enjoy solitude. You are likely to be versatile in social settings.
+    * **Moderately Low Score (-8-2):** Prefers solitary activities and quiet environments. You may be seen as reserved or introverted.
+    * **Very Low Score (-15 to -7):** Highly introverted and avoids social situations. You may be perceived as shy or reclusive
 
 * **Agreeableness:**  
-    Very High Score (16-21): Extremely cooperative and empathetic. You prioritize others' needs and value harmony. You are likely trusting and forgiving.
-    Moderately High Score (12-15): Generally cooperative and considerate. You are likely to be helpful and supportive of others.
-    Average Score (-3-11): Balances cooperation with assertiveness. You can be both cooperative and competitive depending on the situation.
-    Moderately Low Score (-8-2): Can be assertive and competitive. You may be less concerned with others' feelings and more focused on personal goals.
-    Very Low Score (-15 to -7): Highly suspicious and distrustful. You may be seen as hostile or manipulative.  
+    * **Very High Score (16-21):** Extremely cooperative and empathetic. You prioritize others' needs and value harmony. You are likely trusting and forgiving.
+    * **Moderately High Score (12-15):** Generally cooperative and considerate. You are likely to be helpful and supportive of others.
+    * **Average Score (-3-11):** Balances cooperation with assertiveness. You can be both cooperative and competitive depending on the situation.
+    * **Moderately Low Score (-8-2):** Can be assertive and competitive. You may be less concerned with others' feelings and more focused on personal goals.
+    * **Very Low Score (-15 to -7):** Highly suspicious and distrustful. You may be seen as hostile or manipulative.  
 
 * **Neuroticism:**  
     * **Very High Score:** Highly prone to anxiety, mood swings, worry, and emotional instability. May struggle to cope with stress.
