@@ -200,6 +200,8 @@ with tab2:
         get_interpretation(row['Trait'], row['Score'])
     st.info("**Remember:** These are general guidelines and **individual differences** exist. Let this serve as a high level overview of your traits, not a one stop solution.")
 
+st.error("Check the Sidebar for addition reading on the Big Five Model")
+
 with st.expander("Data"):
     st.text("Dataset and collections of your responses:")
     data
