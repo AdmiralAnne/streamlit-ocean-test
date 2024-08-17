@@ -80,18 +80,14 @@ def calculate_ocean_scores(df):
 
     conscientiousness_score = (df[df['ID'].isin([34, 36, 39, 40])]['answer'].sum() +
                                df[df['ID'].isin([35, 37, 38, 41])]['answer'].apply(reverse_score).sum())
-                              
-    print({'Extraversion': extraversion_score,
-            'Neuroticism': neuroticism_score,
-            'Openness': openness_score,
-            'Agreeableness': agreeableness_score,
-            'Conscientiousness': conscientiousness_score})
 
-    return {'Extraversion': extraversion_score,
-            'Neuroticism': neuroticism_score,
+    return {
             'Openness': openness_score,
+            'Conscientiousness': conscientiousness_score,
+            'Extraversion': extraversion_score,
             'Agreeableness': agreeableness_score,
-            'Conscientiousness': conscientiousness_score}
+            'Neuroticism': neuroticism_score
+            }
 
 ocean_scores = calculate_ocean_scores(answers_df)
 scores_df = dict_to_dataframe(ocean_scores)
