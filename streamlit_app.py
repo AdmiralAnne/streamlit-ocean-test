@@ -214,12 +214,10 @@ with st.expander("Raw Data, if you are interested"):
     data
     answers_df
     ocean_scores
+    if st.button("Home"):
+        st.switch_page("streamlit_app.py")
+    if st.button("Read more"):
+        st.switch_page("pages/further_reading.py")
   
 with st.sidebar:
     st.success('Navigate to more pages using the above links ⬆️')
-    
-
-if st.button("Home"):
-    st.switch_page("streamlit_app.py")
-if st.button("Read more"):
-    st.switch_page("pages/further_reading.py")
