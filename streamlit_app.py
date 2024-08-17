@@ -3,7 +3,15 @@ import pandas as pd
 
 st.title('OCEAN Test App')
 
-st.info('A minimal way to take the OCEAN Test and get insights into your personality!')
+st.info("""
+This test offers insights into your traits. 
+
+  * Answer statements using a 1-5 scale (1 = disagree strongly, 5 = agree strongly)
+  * No time limit, answer thoughtfully and Honestly.
+
+""")
+
+# Rest of your code for displaying questions...
 
 # import the csv dataset and read the file
 data=pd.read_csv("OCEAN_questions.csv")
