@@ -9,8 +9,8 @@ st.info('A minimal way to take the OCEAN Test and get insights into your persona
 df = pd.read_csv("OCEAN_questions - give me the sheet here as a table.csv", names=['question', 'choice'])
 df
 
-for index, row in df.iterrows():
-    question = row['question']
-    question
+for index in df['question']:
+    q = question['index']
+    q
 
 st.success("You've completed the OCEAN Test!")
