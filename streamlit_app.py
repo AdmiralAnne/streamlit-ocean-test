@@ -74,22 +74,22 @@ for index, row in questions.iterrows():
                      horizontal=False, key=question_id)
   all_answers[question_id] = answer
 
-if st.button("Submit Answers"):
-  # Check if all questions are answered
-  if len(all_answers) != len(questions):
-    st.error("Please answer all questions before submitting.")
-  else:
-    # Create a DataFrame from answers
-    df = pd.DataFrame.from_dict(all_answers, orient='index', columns=['choice'])
-    df['ID'] = questions['ID']
-    df['question'] = questions['question']
-    df['factor'] = questions['factor']
 
-    # Calculate OCEAN scores
-    ocean_scores = calculate_ocean_scores(df)
+# Check if all questions are answered
+if len(all_answers) != len(questions):
+st.error("Please answer all questions before submitting.")
+else:
+# Create a DataFrame from answers
+df = pd.DataFrame.from_dict(all_answers, orient='index', columns=['choice'])
+df['ID'] = questions['ID']
+df['question'] = questions['question']
+df['factor'] = questions['factor']
 
-    # Display results
-    st.success("Thank you for completing the test!")
-    st.subheader("Your OCEAN Scores:")
-    for factor, score in ocean_scores.items():
-      st.write(f"{factor}: {score:.2f}")
+# Calculate OCEAN scores
+ocean_scores = calculate_ocean_scores(df)
+
+# Display results
+st.success("Thank you for completing the test!")
+st.subheader("Your OCEAN Scores:")
+for factor, score in ocean_scores.items():
+    st.write(f"{factor}: {score:.2f}")
