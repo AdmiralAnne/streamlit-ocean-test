@@ -212,6 +212,7 @@ with st.sidebar:
 
     ### link to websites:
     1. (Simple Psychology - Big Five Personality)[https://www.simplypsychology.org/big-five-personality.html]
+    1. [Simple Psychology - Big Five Personality](https://www.simplypsychology.org/big-five-personality.html)
     """
 
     )
