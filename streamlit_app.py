@@ -262,7 +262,10 @@ def get_interpretation(trait, score):
                 """)
 
 # Iterate through rows using iloc
-for i in range(len(scores_df)):
-    new_df = scores_df.iloc[i:i+1, :]
-    new_df
-    get_interpretation(new_df['Trait'], new_df['Score'])
+# for i in range(len(scores_df)):
+  #  new_df = scores_df.iloc[i:i+1, :]
+  #  new_df
+  #  get_interpretation(new_df['Trait'], new_df['Score'])
+
+for index, row in scores_df.iterrows():
+    get_interpretation(row['Trait'], row['Score'])
