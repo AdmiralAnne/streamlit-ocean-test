@@ -75,10 +75,6 @@ for index, row in questions.iterrows():
   all_answers[question_id] = answer
 
 
-# Check if all questions are answered
-if len(all_answers) != len(questions):
-st.error("Please answer all questions before submitting.")
-else:
 # Create a DataFrame from answers
 df = pd.DataFrame.from_dict(all_answers, orient='index', columns=['choice'])
 df['ID'] = questions['ID']
