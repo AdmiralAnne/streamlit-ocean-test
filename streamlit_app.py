@@ -56,3 +56,4 @@ def display_questions(df):
 
 df = display_questions(questions.copy())  # Avoid modifying original DataFrame
 st.success("Questionnaire completed!")
+df
