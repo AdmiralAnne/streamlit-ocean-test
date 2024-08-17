@@ -12,7 +12,7 @@ data
 questions=data.loc[:, ["ID", "question"]]
 questions
 
-st.radio("Question number 1", ["1","2","3","4","5"], index=0, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, horizontal=False, captions=[
+st.radio("**Question number 1**", ["1","2","3","4","5"], index=0, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, horizontal=False, captions=[
         "Disagree strongly",
         "Disagree a little",
         "Neither agree nor disagree",
