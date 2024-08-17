@@ -93,9 +93,14 @@ ocean_scores = calculate_ocean_scores(answers_df)
 scores_df = dict_to_dataframe(ocean_scores)
 new_columns = ['Trait', 'Score']
 scores_df.columns = new_columns
-scores_df
-    
-st.info("**Remember:** These descriptions provide general guidelines and individual differences exist. It's essential to consider the specific context and purpose of the assessment when interpreting scores.")
+
+
+tab1, tab2 = st.tabs(["Score Table", "Insights"])
+
+with tab1:
+    scores_df
+with tab2:
+    st.info("**Remember:** These descriptions provide general guidelines and individual differences exist. It's essential to consider the specific context and purpose of the assessment when interpreting scores.")
 
 # Function to get the interpretation based on the score
 def get_interpretation(trait, score):
@@ -196,6 +201,7 @@ def get_interpretation(trait, score):
 
 for index, row in scores_df.iterrows():
     get_interpretation(row['Trait'], row['Score'])
+
 
 
 with st.expander("Data"):
