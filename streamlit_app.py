@@ -11,3 +11,5 @@ data
 
 questions=data.loc[:, ["ID", "question"]]
 questions
+
+st.radio(Question number 1, "Option 1", index=0, format_func=special_internal_function, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, horizontal=False, captions=None, label_visibility="visible")
