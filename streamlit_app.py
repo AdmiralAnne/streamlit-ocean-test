@@ -168,7 +168,15 @@ with st.expander("Results Dataframe"):
     answers_df
     ocean_scores
 
-for trait, score in ocean_scores.items():
+ocean_traits = {
+    "Openness to Experience (O)": ocean_scores['Openness'],
+    "Conscientiousness (C)": ocean_scores['Conscientiousness'],
+    "Extraversion (E)": ocean_scores['Extraversion'],
+    "Agreeableness (A)": ocean_scores['Agreeableness'],
+    "Neuroticism (N)": ocean_scores['Neuroticism']
+}
+
+for trait, score in ocean_traits.items():
     with st.expander(trait):
         if score >= 9 and score <= 18:
             st.info(f"**Very Low ({score}):**\n"
