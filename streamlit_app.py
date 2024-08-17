@@ -88,3 +88,32 @@ st.write("Neuroticism:", neuroticism_score)
 st.write("Openness:", openness_score)
 st.write("Agreeableness:", agreeableness_score)
 st.write("Conscientiousness:", conscientiousness_score)
+
+st.info(""" 
+General Interpretations for OCEAN Traits
+Extraversion:
+
+High Scores (16-21): Outgoing, sociable, assertive, enthusiastic, and enjoys being the center of attention.
+Average Scores (6-15): Balanced between introversion and extraversion, with a mix of social and solitary tendencies.
+Low Scores (-15 to 5): Introverted, reserved, quiet, and prefers solitary activities or small groups.
+Neuroticism:
+
+High Scores (16-21): Prone to anxiety, moodiness, irritability, and emotional instability.
+Average Scores (6-15): Experiencing a moderate level of emotional fluctuations and stress.
+Low Scores (-15 to 5): Calm, relaxed, emotionally stable, and resilient to stress.
+Openness:
+
+High Scores (16-21): Curious, imaginative, intellectual, open to new experiences, and appreciates art and creativity.
+Average Scores (6-15): Moderate levels of curiosity and openness to new ideas.
+Low Scores (-15 to 5): Practical, conventional, and prefers routine and familiar experiences.
+Agreeableness:
+
+High Scores (16-21): Cooperative, trusting, empathetic, and considerate of others.
+Average Scores (6-15): Balanced between cooperation and assertiveness.
+Low Scores (-15 to 5): Competitive, suspicious, and assertive, with a focus on personal goals.
+Conscientiousness:
+
+High Scores (16-21): Organized, disciplined, reliable, and hardworking.
+Average Scores (6-15): Moderately organized and reliable.
+Low Scores (-15 to 5): Spontaneous, careless, and less focused on goals.
+""")
