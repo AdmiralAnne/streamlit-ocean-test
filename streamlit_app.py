@@ -44,4 +44,6 @@ def display_questions(df):
   return df
 
 df = display_questions(questions.copy())  # Avoid modifying original DataFrame
-df
+
+with st.expander("Your Results - Open after all 41 questions only/-"):
+    df
