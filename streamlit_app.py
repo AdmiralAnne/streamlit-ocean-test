@@ -26,7 +26,7 @@ all_answers = {}
 for index, row in questions.iterrows():
   question_id = row['ID']
   question_text = row['question']
-  answer = st.radio(f"Question {question_id}: {question_text}", options=[1, 2, 3, 4, 5],
+  answer = st.radio(f"Question {question_id}: **{question_text}**", options=[1, 2, 3, 4, 5],
                      captions=[
                          "Disagree strongly",
                          "Disagree a little",
