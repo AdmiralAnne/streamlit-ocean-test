@@ -207,12 +207,12 @@ with st.expander("Data"):
     ocean_scores
   
 with st.sidebar:
-    st.subheader('Some Extra Reading material on the big five model:')
+    st.success('Some Extra Reading material on the big five model:')
     st.markdown("""
 
     ### link to websites:
     1. [Simple Psychology - Big Five Personality](https://www.simplypsychology.org/big-five-personality.html)
-    <hr>
+    
     2. [Very well mind - How to Use the Big 5 Personality Traits](https://www.verywellmind.com/the-big-five-personality-dimensions-2795422)
 
     """
