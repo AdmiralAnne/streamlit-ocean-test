@@ -39,7 +39,7 @@ def display_questions(df):
     st.subheader(f"Question {question_id}: {question_text}")
 
     # Display answer options with radio buttons (unique key)
-    answer = st.radio("Choose your answer:", options=[1, 2, 3, 4, 5],Index=None,key=index,
+    answer = st.radio("Choose your answer:", options=[1, 2, 3, 4, 5], index=None, key=index,
                        captions=[
                            "Disagree strongly",
                            "Disagree a little",
