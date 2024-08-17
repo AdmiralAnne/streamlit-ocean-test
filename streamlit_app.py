@@ -114,6 +114,8 @@ def get_interpretation(trait, score):
                 st.write("""
                 **High (37-45):** Your high level of openness suggests a strong curiosity and imagination, often driving you to seek out intellectual and artistic pursuits. You thrive on new ideas and experiences, which can lead to innovative thinking and creative problem-solving. While this trait can be a significant asset, be mindful of the potential for becoming easily bored with routine tasks. Channel your curiosity into projects that challenge and inspire you.
                 """)
+            st.write("Further Reading: https://bigfive-test.com/articles/openness")
+
 
     elif trait == "Conscientiousness":
         with st.expander("**Conscientiousness (C)**"):
@@ -133,6 +135,8 @@ def get_interpretation(trait, score):
                 st.write("""
                 **High (37-45):** Your high conscientiousness indicates a strong sense of discipline and organization, often making you dependable and goal-oriented. You likely excel in structured environments where attention to detail and perseverance are valued. While this trait is beneficial for achieving success, be cautious of becoming overly rigid or perfectionistic. Allow yourself moments of spontaneity to foster creativity and prevent burnout.
                 """)
+            st.write("Further Reading: https://bigfive-test.com/articles/conscientiousness")
+            
 
     elif trait == "Extraversion":
         with st.expander("**Extraversion (E)**"):
@@ -152,6 +156,7 @@ def get_interpretation(trait, score):
                 st.write("""
                 **High (37-45):** Your strong desire for social interaction and stimulation often makes you energetic and charismatic. You likely excel in environments that require teamwork and communication, drawing energy from engaging with others. While your extraversion is a significant asset, be mindful of the need for occasional solitude to recharge and reflect. Balance your social activities with moments of introspection to maintain overall well-being.
                 """)
+            st.write("Further Reading: https://bigfive-test.com/articles/extraversion")
 
     elif trait == "Agreeableness":
         with st.expander("**Agreeableness (A)**"):
@@ -171,6 +176,7 @@ def get_interpretation(trait, score):
                 st.write("""
                 **High (37-45):** Your high agreeableness suggests a strong sense of altruism and empathy, often leading you to prioritize others' needs over your own. While this trait fosters deep connections and trust, be cautious of becoming overly accommodating or neglecting your own well-being. Strive to balance your empathy with self-care and assertiveness to maintain healthy relationships and personal fulfillment.
                 """)
+            st.write("Further Reading: https://bigfive-test.com/articles/agreeableness")
 
     elif trait == "Neuroticism":
         with st.expander("**Neuroticism (N)**"):
