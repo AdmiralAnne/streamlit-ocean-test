@@ -40,7 +40,7 @@ for index, row in questions.iterrows():
 
   # Add answer and ID to the DataFrame
   new_row = {'ID': question_id, 'answer': answer}
-  answers = answers_df.append(new_row, ignore_index=True)
+  answers = answers.append(new_row, ignore_index=True)
 
 questions
 data
