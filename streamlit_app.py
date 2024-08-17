@@ -99,16 +99,6 @@ new_columns = ['Trait', 'Score ']
 scores_df.columns = new_columns
 scores_df
 
-
-st.info(""" 
-**General Interpretaion of scores**
-""")
-
-with st.expander("**Openness to Experience (O)**"):
-st.info(""" 
-**General Interpretation of Scores**
-""")
-
 with st.expander("**Openness to Experience (O)**"):
     st.write("""
     **Very Low (9-18):** You are likely to value tradition and practicality, often finding comfort in the familiar and routine. This preference might make you less inclined to seek out novel experiences or ideas, which can be beneficial in environments that require consistency and reliability. However, it may also limit your exposure to diverse perspectives and innovative solutions. Consider gradually introducing new experiences into your life to enhance creativity and adaptability.
@@ -163,8 +153,8 @@ with st.expander("**Neuroticism (N)**"):
 
     **High (37-45):** Your high levels of neuroticism may manifest as anxiety, mood swings, and difficulty coping with stress. While this emotional sensitivity can enhance your empathy and creativity, it may also lead to challenges in maintaining emotional stability. Consider seeking support from mental health professionals or developing mindfulness practices to enhance your emotional resilience and well-being.
     """)
-
-with st.info("**Remember: These descriptions provide general guidelines and individual differences exist. It's essential to consider the specific context and purpose of the assessment when interpreting scores.**")
+    
+st.info("**Remember:** These descriptions provide general guidelines and individual differences exist. It's essential to consider the specific context and purpose of the assessment when interpreting scores.")
 
 with st.expander("Results Dataframe"):
     st.text("Dataset and collections of your responses:")
