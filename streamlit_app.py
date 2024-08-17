@@ -30,8 +30,6 @@ def display_questions(df):
 
 # Assuming you have a DataFrame named 'df' with the provided data
 # Create a 'choice' column if it doesn't exist
-if 'choice' not in df.columns:
-  df['choice'] = 0
 
 df = display_questions(df)
 st.success("Questionnaire completed!")
