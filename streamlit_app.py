@@ -93,29 +93,43 @@ st.info("""
 
 General Interpretations for OCEAN Traits
 
-Extraversion:
-High Scores (16-21): Outgoing, sociable, assertive, enthusiastic, and enjoys being the center of attention.
-Average Scores (6-15): Balanced between introversion and extraversion, with a mix of social and solitary tendencies.
-Low Scores (-15 to 5): Introverted, reserved, quiet, and prefers solitary activities or small groups.
+The OCEAN model categorizes personality into five broad dimensions:
 
-Neuroticism:
-High Scores (16-21): Prone to anxiety, moodiness, irritability, and emotional instability.
-Average Scores (6-15): Experiencing a moderate level of emotional fluctuations and stress.
-Low Scores (-15 to 5): Calm, relaxed, emotionally stable, and resilient to stress.
+* **Openness to Experience (Openness)**:  
+    * **Very High Score (16-21):** Highly curious, imaginative, and intellectually driven. Seeks new experiences and enjoys novelty. Appreciates art, philosophy, and creative endeavors.
+    * **Moderately High Score (11-15):** Open to new ideas and experiences, but also values familiarity. Enjoys learning and exploring within their interests.
+    * **Average Score (6-10):** Balanced between openness and preference for routine. May be open to new things in certain contexts.
+    * **Moderately Low Score (1-5):** Prefers routine and familiar experiences. May be skeptical of new ideas or approaches.
+    * **Very Low Score (-5 to 0):** Highly practical and conventional. May resist change and focus on established ways of doing things.
 
-Openness:
-High Scores (16-21): Curious, imaginative, intellectual, open to new experiences, and appreciates art and creativity.
-Average Scores (6-15): Moderate levels of curiosity and openness to new ideas.
-Low Scores (-15 to 5): Practical, conventional, and prefers routine and familiar experiences.
+* **Conscientiousness:**  
+    * **Very High Score (16-21):** Extremely organized, disciplined, reliable, and goal-oriented. Strives for perfection and maintains a strong work ethic.
+    * **Moderately High Score (11-15):** Well-organized, responsible, and dependable. Manages time and resources effectively.
+    * **Average Score (6-10):** Moderately organized and reliable, but may be flexible with details and deadlines.
+    * **Moderately Low Score (1-5):** Can be disorganized and impulsive. May struggle with deadlines and task completion.
+    * **Very Low Score (-5 to 0):** Highly spontaneous and carefree. May show disregard for rules and planning.
 
-Agreeableness:
-High Scores (16-21): Cooperative, trusting, empathetic, and considerate of others.
-Average Scores (6-15): Balanced between cooperation and assertiveness.
-Low Scores (-15 to 5): Competitive, suspicious, and assertive, with a focus on personal goals.
+* **Extraversion:**  
+    * **Very High Score (16-21):** Highly outgoing, social, and energetic. Craves stimulation and enjoys being the center of attention. Thrives in social settings.
+    * **Moderately High Score (11-15):** Enjoys social interaction but also values time alone. Comfortable in social situations and assertive in expressing themselves.
+    * **Average Score (6-10):** Balanced between introversion and extraversion. Can enjoy social interaction but also needs time to recharge alone.
+    * **Moderately Low Score (1-5):** Prefers solitude and quiet environments. May feel drained by prolonged social interaction.
+    * **Very Low Score (-5 to 0):** Highly introverted and reserved. Avoids large groups or social gatherings.
 
-Conscientiousness: 
-High Scores (16-21): Organized, disciplined, reliable, and hardworking.
-Average Scores (6-15): Moderately organized and reliable.
-Low Scores (-15 to 5): Spontaneous, careless, and less focused on goals.
+* **Agreeableness:**  
+    * **Very High Score (16-21):** Extremely cooperative, trusting, compassionate, and puts others' needs first. Values harmony and avoids conflict.
+    * **Moderately High Score (11-15):** Generally cooperative and helpful. Considers others' perspectives and prioritizes maintaining positive relationships.
+    * **Average Score (6-10):** Balanced between cooperation and assertiveness. Can express needs while being considerate of others.
+    * **Moderately Low Score (1-5):** Can be competitive and assertive. May prioritize personal goals over others' needs.
+    * **Very Low Score (-5 to 0):** Highly suspicious and distrustful. May be seen as self-centered and prioritize personal gain over cooperation.
+
+* **Neuroticism:**  
+    * **Very High Score (16-21):** Highly prone to anxiety, mood swings, worry, and emotional instability. May struggle to cope with stress.
+    * **Moderately High Score (11-15):** Experiences moderate levels of anxiety and stress. May be easily frustrated or emotional.
+    * **Average Score (6-10):** Generally experiences emotional stability but may face occasional stress or worry.
+    * **Moderately Low Score (1-5):** Generally calm and resilient. May not experience anxiety or stress frequently.
+    * **Very Low Score (-5 to 0):** Highly emotionally stable and relaxed. Rarely experiences anxiety or stress. (**Note:** Extremely low scores might indicate a lack of emotional awareness)
+
+**Please remember:** These are general descriptions, and individual differences exist. Interpreting scores should consider the specific context and purpose of the assessment.
 
 """)
