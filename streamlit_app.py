@@ -200,9 +200,9 @@ with tab2:
         get_interpretation(row['Trait'], row['Score'])
     st.info("**Remember:** These are general guidelines and **individual differences** exist. Let this serve as a high level overview of your traits, not a one stop solution.")
 
-st.error("◀️ Check the ◀ Sidebar for addition reading on the Big Five Model")
+st.error("◀️ Check the Sidebar for addition reading on the Big Five Model")
 
-with st.expander("Data"):
+with st.expander("Raw Data, if you are interested"):
     st.text("Dataset and collections of your responses:")
     data
     answers_df
@@ -219,3 +219,8 @@ with st.sidebar:
 
     """
     )
+
+if st.button("Home"):
+    st.switch_page("streamlit_app.py")
+if st.button("Page 1"):
+    st.switch_page("pages/page_2.py")
