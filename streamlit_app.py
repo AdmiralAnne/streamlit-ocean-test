@@ -265,6 +265,6 @@ def get_interpretation(trait, score):
 for index, row in scores_df.iterrows():
     index
     row
-    row = row.T.reset_index
+    row = row.T
     row
     get_interpretation(row['Trait'], row['Score'])
