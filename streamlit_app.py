@@ -133,7 +133,7 @@ General Interpretations for OCEAN Traits
 """)
 
 with st.expander("Results Dataframe"):
-    st.subheading("collection of your responses:")
+    st.text("collection of your responses:")
     answers_df
 
 # Function to generate the PDF report
