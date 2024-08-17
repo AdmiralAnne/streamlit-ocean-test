@@ -107,10 +107,13 @@ st.info("""
 with st.expander("**Openness to Experience (O)**"):
     st.write("""
     
-    Very Low (9-18): Individuals in this range tend to be more traditional, practical, and down-to-earth. They may be less interested in new ideas or experiences and prefer familiar routines.
-    Low (19-27): Somewhat conventional, but open to new experiences within their comfort zone. They might be cautious about trying new things but adaptable to change.
-     (28-36): Balanced approach to new experiences. They are open to learning and trying new things but also appreciate routine and stability.
-    High (37-45): Highly imaginative and curious individuals. They are open to new ideas and experiences, often seeking out intellectual stimulation and artistic pursuits.
+    **Very Low (9-18):** Individuals in this range tend to be more traditional, practical, and down-to-earth. They may be less interested in new ideas or experiences and prefer familiar routines.
+    
+    **Low (19-27):** Somewhat conventional, but open to new experiences within their comfort zone. They might be cautious about trying new things but adaptable to change.
+
+    **Average (28-36):** Balanced approach to new experiences. They are open to learning and trying new things but also appreciate routine and stability.
+
+    **High (37-45):** Highly imaginative and curious individuals. They are open to new ideas and experiences, often seeking out intellectual stimulation and artistic pursuits.
     """)
 
 with st.expander("**Conscientiousness (C)**"):
