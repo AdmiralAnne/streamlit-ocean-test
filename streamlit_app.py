@@ -37,9 +37,9 @@ for index, row in questions.iterrows():
                      horizontal=False, key=question_id)
   all_answers[question_id] = answer
 
-questions
-data
-all_answers
+# questions
+# data
+# all_answers
 
 def dict_to_dataframe(data_dict):
   """Converts a dictionary to a Pandas DataFrame.
