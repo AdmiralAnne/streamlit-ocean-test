@@ -157,3 +157,9 @@ with st.expander("Results Dataframe"):
     data
     answers_df
     ocean_scores
+
+for index, row in scores_df.iterrows():
+    trait = row['Trait']
+    trait
+    score = row['Score']
+    score
