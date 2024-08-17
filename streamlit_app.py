@@ -14,22 +14,20 @@ with st.expander("Data"):
     questions
 
 def display_questions(df):
-  """Displays questions with radio buttons for answers and stores choices in DataFrame.
-
-  Args:
-    df: The DataFrame containing question data (ID, question, choice).
-
-  Returns:
-    The modified DataFrame with user choices stored.
+  """Displays questions one by one with radio buttons for answers and stores choices in DataFrame.
+    Returns: The modified DataFrame with user choices stored.
   """
 
-  for index, row in df.iterrows():
-    question_id = row['ID']
-    question_text = row['question']
+  if 'current_question' not in st.session_state:
+    st.session_state.current_question = 0
+
+  if st.session_state.current_question < len(df):
+    current_question = st.session_state.current_question
+    question_id = df.loc[current_question, 'ID']
+    question_text = df.loc[current_question, 'question']
     st.subheader(f"Question {question_id}: {question_text}")
 
-    # Display answer options with radio buttons (unique key)
-    answer = st.radio("Choose your answer:", options=[1, 2, 3, 4, 5], index=None, key=index,
+    answer = st.radio("Choose your answer:", options=[1, 2, 3, 4, 5], index=0, key=current_question,
                        captions=[
                            "Disagree strongly",
                            "Disagree a little",
@@ -38,12 +36,12 @@ def display_questions(df):
                            "Agree strongly"
                        ],
                        horizontal=False)
-    df.loc[index, 'choice'] = answer
+    df.loc[current_question, 'choice'] = answer
+
+    if st.button('Next'):
+      st.session_state.current_question += 1
 
   return df
 
-# Assuming you already have the 'questions' DataFrame with ID, question, and choice columns
-
-df = display_questions(questions.copy())  # Avoid modifying original DataFrame
-st.success("Questionnaire completed!")
+df = display_questions(df.copy())  # Avoid modifying original DataFrame
 df
