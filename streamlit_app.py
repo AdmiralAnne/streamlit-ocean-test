@@ -20,7 +20,10 @@ questions
 #        "Agree strongly"], label_visibility="visible")
 
 
-def display_questions(data_new):
+import streamlit as st
+import pandas as pd
+
+def display_questions(df):
   """Displays questions with radio buttons for answers and stores choices in DataFrame.
 
   Args:
@@ -30,13 +33,13 @@ def display_questions(data_new):
     The modified DataFrame with user choices stored.
   """
 
-  for index, row in data_new.iterrows():
+  for index, row in df.iterrows():
     question_id = row['ID']
     question_text = row['question']
     st.subheader(f"Question {question_id}: {question_text}")
 
-    # Display answer options with radio buttons
-    answer = st.radio("Choose your answer:", options=[1, 2, 3, 4, 5],
+    # Display answer options with radio buttons (unique key)
+    answer = st.radio("Choose your answer:", options=[1, 2, 3, 4, 5], key=index,
                        captions=[
                            "Disagree strongly",
                            "Disagree a little",
@@ -45,11 +48,11 @@ def display_questions(data_new):
                            "Agree strongly"
                        ],
                        horizontal=False)
-    data_new.loc[index, 'choice'] = answer
+    df.loc[index, 'choice'] = answer
 
-  return data_new
+  return df
 
 # Assuming you already have the 'questions' DataFrame with ID, question, and choice columns
 
-data_new = display_questions(questions.copy())  # Avoid modifying original DataFrame
+df = display_questions(questions.copy())  # Avoid modifying original DataFrame
 st.success("Questionnaire completed!")
