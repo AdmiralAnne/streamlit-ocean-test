@@ -7,9 +7,6 @@ df=pd.read_csv("OCEAN_questions - give me the sheet here as a table.csv")
 df.rename(columns={'score': 'choice'})
 df
 
-import streamlit as st
-import pandas as pd
-
 def create_questionnaire(df):
     for index, row in df.iterrows():
         question = row['question']
@@ -39,3 +36,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+main()
