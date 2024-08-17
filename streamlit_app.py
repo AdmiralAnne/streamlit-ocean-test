@@ -55,7 +55,7 @@ def calculate_ocean_scores(df):
   # Calculate scores for each factor
   ocean_scores = {}
   for factor in ['Extraversion', 'Neuroticism', 'Openness', 'Agreeableness', 'Conscientiousness']:
-    ocean_scores[factor] = calculate_factor_score(factor, df.copy())  # Avoid modifying original DataFrame
+    ocean_scores[factor] = calculate_factor_score(factor, data.copy())  # Avoid modifying original DataFrame
 
   return ocean_scores
 
