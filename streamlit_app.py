@@ -15,7 +15,7 @@ This test offers insights into your traits. Be honest!
 # Import the CSV dataset and read the file
 try:
   data = pd.read_csv("OCEAN_questions.csv")
-  questions = data.loc[:, ["ID", "question", "choice"]]
+  questions = data.loc[:, ["ID", "question", "choice","factor"]]
 except FileNotFoundError:
   st.error("Error: 'OCEAN_questions.csv' file not found. Please ensure the file exists in the same directory as your script.")
   exit()
