@@ -265,11 +265,4 @@ def get_interpretation(trait, score):
 for i in range(len(scores_df)):
     new_df = scores_df.iloc[i:i+1, :]
     new_df
-
-# Iterate through each row in the DataFrame and display the interpretation
-for index, row in scores_df.iterrows():
-    scores_df
-    index
-    row
-    get_interpretation(row['Trait'], row['Score'])
-
+    get_interpretation(new_df['Trait'], new_df['Score'])
