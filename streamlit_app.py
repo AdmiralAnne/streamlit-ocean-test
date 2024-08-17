@@ -164,7 +164,7 @@ with st.expander("**Neuroticism (N)**"):
     **High (37-45):** Your high levels of neuroticism may manifest as anxiety, mood swings, and difficulty coping with stress. While this emotional sensitivity can enhance your empathy and creativity, it may also lead to challenges in maintaining emotional stability. Consider seeking support from mental health professionals or developing mindfulness practices to enhance your emotional resilience and well-being.
     """)
 
-st.info("**Remember: These descriptions provide general guidelines and individual differences exist. It's essential to consider the specific context and purpose of the assessment when interpreting scores.**")
+with st.info("**Remember: These descriptions provide general guidelines and individual differences exist. It's essential to consider the specific context and purpose of the assessment when interpreting scores.**")
 
 with st.expander("Results Dataframe"):
     st.text("Dataset and collections of your responses:")
