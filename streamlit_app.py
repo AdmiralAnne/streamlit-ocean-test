@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from fpdf import FPDF
 
 st.title('OCEAN Test App')
 
@@ -61,7 +62,6 @@ def dict_to_dataframe(data_dict):
 
 
 answers_df = dict_to_dataframe(all_answers)
-answers_df
 
 
 # Manual calculations for OCEAN scores
@@ -122,12 +122,53 @@ General Interpretations for OCEAN Traits
     * **Very Low Score (-15 to -7):** Highly suspicious and distrustful. You may be seen as hostile or manipulative.  
 
 * **Neuroticism:**  
-    * **Very High Score:** Highly prone to anxiety, mood swings, worry, and emotional instability. May struggle to cope with stress.
-    * **Moderately High Score:** Experiences moderate levels of anxiety and stress. May be easily frustrated or emotional.
-    * **Average Score (6-10):** Generally experiences emotional stability but may face occasional stress or worry.
-    * **Moderately Low Score:** Generally calm and resilient. May not experience anxiety or stress frequently.
-    * **Very Low Score :** Highly emotionally stable and relaxed. Rarely experiences anxiety or stress. (**Note:** Extremely low scores might indicate a lack of emotional awareness)
+    * **Very High Score(16-21):** Highly prone to anxiety, mood swings, worry, and emotional instability. May struggle to cope with stress.
+    * **Moderately High Score(12-15):** Experiences moderate levels of anxiety and stress. May be easily frustrated or emotional.
+    * **Average Score (3-11):** Generally experiences emotional stability but may face occasional stress or worry.
+    * **Moderately Low Score(-8-2):** Generally calm and resilient. May not experience anxiety or stress frequently.
+    * **Very Low Score(-15 to -7):** Highly emotionally stable and relaxed. Rarely experiences anxiety or stress. (**Note:** Extremely low scores might indicate a lack of emotional awareness)
 
 **Please remember:** These are general descriptions, and individual differences exist. Interpreting scores should consider the specific context and purpose of the assessment.
 
 """)
+
+with st.expander("Results Dataframe"):
+    st.subheading("collection of your responses:")
+    answers_df
+
+# Function to generate the PDF report
+def generate_pdf_report(scores, interpretations):
+  """
+  Generates a PDF report with OCEAN scores and interpretations.
+
+  Args:
+      scores: A dictionary containing OCEAN trait scores (Extraversion, Neuroticism, etc.)
+      interpretations: A string containing the general interpretations for OCEAN traits.
+  """
+  pdf = FPDF()
+  pdf.add_page()
+  pdf.set_font("Arial", size=16)
+
+  # Title and Scores
+  pdf.cell(200, 10, txt="OCEAN Test Results", ln=1, align='C')
+  for trait, score in scores.items():
+    pdf.cell(80, 10, txt=f"{trait}:", align='L')
+    pdf.cell(80, 10, txt=f"{score}", align='R')
+    pdf.ln(5)
+
+  # Interpretations
+  pdf.cell(200, 10, txt="General Interpretations for OCEAN Traits", ln=2, align='C')
+  pdf.multi_cell(0, 5, txt=interpretations)
+
+  pdf.output("ocean_test_results.pdf")
+
+# Generate PDF on button click
+if st.button("Download PDF Report"):
+  scores = {
+      "Extraversion": extraversion_score,
+      "Neuroticism": neuroticism_score,
+      "Openness": openness_score,
+      "Agreeableness": agreeableness_score,
+      "Conscientiousness": conscientiousness_score
+  }
+  generate_pdf_report(scores, interpretations)
