@@ -74,6 +74,8 @@ for index, row in questions.iterrows():
                      horizontal=False, key=question_id)
   all_answers[question_id] = answer
 
+all_answers
+df
 
 # Create a DataFrame from answers
 df = pd.DataFrame.from_dict(all_answers, orient='index', columns=['choice'])
