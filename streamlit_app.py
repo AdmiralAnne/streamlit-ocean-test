@@ -263,8 +263,7 @@ def get_interpretation(trait, score):
 
 # Iterate through each row in the DataFrame and display the interpretation
 for index, row in scores_df.iterrows():
+    scores_df
     index
     row
-    row_t = row.T
-    row_t
     get_interpretation(row['Trait'], row['Score'])
