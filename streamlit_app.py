@@ -4,12 +4,12 @@ import pandas as pd
 st.title('OCEAN Test App')
 
 st.info("""
-This test offers insights into your traits. Be honest!
+This test offers insights into your characteristic traits accprding to the Big Five model
 
 * Answer statements using a 1-5 scale (1 = disagree strongly, 5 = agree strongly)
 * There is no time limit, answer thoughtfully.
 
-**Please answer all questions as accurately as possible.**
+**Please answer all questions as accurately as possible for best results.**
 """)
 
 # Import the CSV dataset and read the file
