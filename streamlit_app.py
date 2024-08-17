@@ -159,7 +159,5 @@ with st.expander("Results Dataframe"):
     ocean_scores
 
 for index, row in scores_df.iterrows():
-    index
     print(index)
-    row
     print(row)
