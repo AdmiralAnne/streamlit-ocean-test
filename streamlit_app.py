@@ -265,4 +265,4 @@ def get_interpretation(trait, score):
 for i in range(len(scores_df)):
     new_df = scores_df.iloc[i:i+1, :]
     new_df
-    get_interpretation(new_df[0][0], new_df[0][0])
+    get_interpretation(new_df[0], new_df[1])
