@@ -22,13 +22,14 @@ def create_questionnaire(df):
             ]
         )
         df.loc[index, 'choice'] = int(choice[0])  # Extract the number from the choice 
-    df
+    
 
     return df
 
 def main():
 
-    df = create_questionnaire(df)
+    data = create_questionnaire(df)
+    data
 
 
 if __name__ == "__main__":
