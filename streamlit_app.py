@@ -93,8 +93,6 @@ st.info("""
 
 General Interpretations for OCEAN Traits
 
-The OCEAN model categorizes personality into five broad dimensions:
-
 * **Openness to Experience (Openness)**:  
     * **Very High Score (16-21):** Highly curious, imaginative, and intellectually driven. Seeks new experiences and enjoys novelty. Appreciates art, philosophy, and creative endeavors.
     * **Moderately High Score (11-15):** Open to new ideas and experiences, but also values familiarity. Enjoys learning and exploring within their interests.
