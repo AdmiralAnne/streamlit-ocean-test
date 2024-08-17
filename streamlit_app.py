@@ -84,5 +84,5 @@ def calculate_ocean_scores(answers):
   df = pd.DataFrame({'factors': list(ocean_scores.keys()), 'scores': list(ocean_scores.values())})
   return df
 
-final = calculate_ocean_scores(all_answer)
+final = calculate_ocean_scores(all_answers)
 final
