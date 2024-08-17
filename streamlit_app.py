@@ -215,4 +215,4 @@ with st.sidebar:
 if st.button("Home"):
     st.switch_page("streamlit_app.py")
 if st.button("Read more"):
-    st.switch_page("pages/pages/further_reading.py")
+    st.switch_page("pages/further_reading.py")
