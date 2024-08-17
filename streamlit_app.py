@@ -94,20 +94,80 @@ def calculate_ocean_scores(df):
             'Conscientiousness': conscientiousness_score}
 
 ocean_scores = calculate_ocean_scores(answers_df)
-ocean_scores
 scores_df = dict_to_dataframe(ocean_scores)
-new_columns = ['Trait', 'Score']
+new_columns = ['Trait', 'Score ']
 scores_df.columns = new_columns
 scores_df
 
 
 st.info(""" 
-
-Some text coming here later
-
+**General Interpretaion of scores**
 """)
 
+with st.expander("**Openness to Experience (O)**"):
+    st.write("""
+    
+    Very Low (9-18): Individuals in this range tend to be more traditional, practical, and down-to-earth. They may be less interested in new ideas or experiences and prefer familiar routines.
+    Low (19-27): Somewhat conventional, but open to new experiences within their comfort zone. They might be cautious about trying new things but adaptable to change.
+     (28-36): Balanced approach to new experiences. They are open to learning and trying new things but also appreciate routine and stability.
+    High (37-45): Highly imaginative and curious individuals. They are open to new ideas and experiences, often seeking out intellectual stimulation and artistic pursuits.
+    """)
+
+with st.expander("**Conscientiousness (C)**"):
+    st.write("""  
+    Very Low (9-18): Individuals in this range may be more spontaneous, impulsive, and less focused on goals. They may struggle with organization and time management.
+
+    Low (19-27): Relatively laid-back and easygoing, but can be inconsistent in their approach to tasks and responsibilities.
+
+    Average (28-36): Generally organized and reliable, able to balance spontaneity with responsibility.
+
+    High (37-45): Highly organized, disciplined, and goal-oriented individuals. They are likely to be dependable and hardworking.
+    """)
+
+with st.expander("**Extraversion (E)**"):
+    st.write("""  
+  Very Low (9-18): Individuals in this range tend to be introverted, preferring solitary activities or small groups. They may be seen as reserved or shy.
+
+  Low (19-27): Moderate level of extraversion, enjoying social interaction but also valuing alone time. They may be seen as balanced or ambiverted.
+
+  Average (28-36): Outgoing and sociable individuals who enjoy being around people. They are likely to be assertive and enthusiastic.
+
+  High (37-45): Extremely extraverted, with a strong desire for social interaction and stimulation. They are often seen as energetic and charismatic.
+  """)
+
+with st.expander("**Agreeableness (A)**"):
+    st.write("""  
+    Very Low (9-18): Individuals in this range tend to be assertive, competitive, and focused on their own needs. They may be seen as skeptical or distrustful.
+
+    Low (19-27): Somewhat assertive and independent, but also able to cooperate with others. They might be seen as balanced in their approach to social interactions.
+
+    Average (28-36): Cooperative and considerate, valuing harmony in relationships. They are likely to be helpful and empathetic.
+
+    High (37-45): Extremely altruistic and empathetic, often prioritizing the needs of others over their own. They may be seen as overly accommodating.
+    """)
+
+with st.expander("**Neuroticism (N)**"):
+    st.write("""  
+    Very Low (9-18): Emotionally stable and resilient, able to handle stress effectively. They may be seen as calm and collected.
+
+    Low (19-27): Generally emotionally stable, but may experience occasional mood swings or anxiety.
+
+    Average (28-36): Prone to moderate levels of anxiety and emotional reactivity. They may experience stress and worry more frequently.
+
+    High (37-45): High levels of neuroticism, characterized by anxiety, mood swings, and difficulty coping with stress.    
+    """)
+
+st.info("**Remember: These descriptions provide general guidelines and individual differences exist. It's essential to consider the specific context and purpose of the assessment when interpreting scores.**")
+
 with st.expander("Results Dataframe"):
-    st.text("collection of your responses:")
+    st.text("Dataset and collections of your responses:")
     data
     answers_df
+    ocean_scores
+
+
+
+
+
+
+
