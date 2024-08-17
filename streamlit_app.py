@@ -4,10 +4,10 @@ import pandas as pd
 st.title('OCEAN Test App')
 
 st.info("""
-This test offers insights into your characteristic traits accprding to the Big Five model
+Get insights into your characteristic traits according to the Big Five model
 
 * Answer statements using a 1-5 scale (1 = disagree strongly, 5 = agree strongly)
-* There is no time limit, answer thoughtfully.
+* There is no time limit, usually takes less than 8 minutes .
 
 **Please answer all questions as accurately as possible for best results.**
 """)
