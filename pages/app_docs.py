@@ -89,11 +89,41 @@ st.divider()
 st.write('**Scoring the OCEAN Traits**')
 
 st.write("""
-    All we did here was store the IDS of the
+    All we did here was screate a function: **calculate_ocean_scores(df)** that calculates all the scores for each trait using the reference pdf, with normal score ids and reverse score ids. We have another smaller function to reverse the score if it matches the specified ids.
+    Later we store it in a variable: ocean_scores
 """)
 
 code3 = '''
-    
+# Function to reverse score values
+def reverse_score(value):
+    return 6 - value
+
+# Manual calculations for OCEAN scores
+def calculate_ocean_scores(df):
+    extraversion_score = (df[df['ID'].isin([1, 3, 4, 6, 8])]['answer'].sum() +
+                          df[df['ID'].isin([2, 5, 7, 9])]['answer'].apply(reverse_score).sum())
+
+    neuroticism_score = (df[df['ID'].isin([10, 12, 13, 15, 17])]['answer'].sum() +
+                           df[df['ID'].isin([11, 14, 16])]['answer'].apply(reverse_score).sum())
+
+    openness_score = (df[df['ID'].isin([19, 20, 21, 23])]['answer'].sum() +
+                       df[df['ID'].isin([18, 22, 24, 25])]['answer'].apply(reverse_score).sum())
+
+    agreeableness_score = (df[df['ID'].isin([27, 29, 30, 32])]['answer'].sum() +
+                           df[df['ID'].isin([26, 28, 31, 33])]['answer'].apply(reverse_score).sum())
+
+    conscientiousness_score = (df[df['ID'].isin([34, 36, 39, 40])]['answer'].sum() +
+                               df[df['ID'].isin([35, 37, 38, 41])]['answer'].apply(reverse_score).sum())
+
+    return {
+            'Openness': openness_score,
+            'Conscientiousness': conscientiousness_score,
+            'Extraversion': extraversion_score,
+            'Agreeableness': agreeableness_score,
+            'Neuroticism': neuroticism_score
+            }
+
+ocean_scores = calculate_ocean_scores(answers_df)
     '''
 st.code(code3, language="python")
 
