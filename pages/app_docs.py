@@ -180,4 +180,4 @@ st.divider()
 
 st.info("That's preety much it, it's a simple program wiht little to no complexity but the scores we attain from this test can further help us to create an even more comprehensive Interpretation - such as Personalized advice, Jobs Recommendation, Techniques to get better at certain traits if you wish etc. . .")
 
-st.exception("Ciao! Special thanks to the entire team who helped bring this project to life!")
+st.success("Ciao! Special thanks to the entire team who helped bring this project to life!")
