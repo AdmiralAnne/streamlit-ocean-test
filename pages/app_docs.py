@@ -39,3 +39,23 @@ code = '''
 st.code(code, language="python")
 
 st.divider()
+
+st.write('**Displaying the questions**')
+
+code1 = '''
+    all_answers = {}
+    for index, row in questions.iterrows():
+        question_id = row['ID']
+        question_text = row['question']
+         = st.radio(f"Question {question_id}: **{question_text}**", options=[1, 2, 3, 4, 5],
+                     captions=[
+                         "Disagree strongly",
+                         "Disagree a little",
+                         "Neither agree nor disagree",
+                         "Agree a little",
+                         "Agree strongly"
+                     ],
+                     horizontal=False, key=question_id)
+    all_answers[question_id] = answer
+    '''
+st.code(code1, language="python")
