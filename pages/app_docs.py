@@ -90,7 +90,7 @@ st.write('**Scoring the OCEAN Traits**')
 
 st.write("""
     All we did here was screate a function: **calculate_ocean_scores(df)** that calculates all the scores for each trait using the reference pdf, with normal score ids and reverse score ids. We have another smaller function to reverse the score if it matches the specified ids.
-    Later we store it in a variable: ocean_scores
+    Later we store it in a variable: ocean_scores(which is a dictionary with the final scores, we will also convert this to a dataframe.)
 """)
 
 code3 = '''
@@ -126,5 +126,32 @@ def calculate_ocean_scores(df):
 ocean_scores = calculate_ocean_scores(answers_df)
     '''
 st.code(code3, language="python")
+
+st.divider()
+
+st.write('**Displaying the Results**')
+
+st.write("""
+    Simply display the new dataframe witht the final ocean test scores.
+    And then, we created a rather long and.. tedious function that displays the appropriate interpretation of your test, according to the score you got. We just use Conditional if else statements for this.
+""")
+
+code4 = '''
+    # Function to get the interpretation based on the score
+    def get_interpretation(trait, score):
+        if trait == "Openness":
+            with st.expander("**Openness to Experience (O)**"):
+                if 9 <= score <= 18:
+                    st.write("Interpretation text here...")
+                elif 19 <= score <= 27:
+                    st.write("Interpretation text here...")
+                elif 28 <= score <= 36:
+                    st.write("Interpretation text here...")
+                elif 37 <= score <= 45:
+                    st.write("Interpretation text here...")
+                st.write("Further Reading: https://bigfive-test.com/articles/openness")
+        # Simply repeat this for other traits...
+    '''
+st.code(code4, language="python")
 
 st.divider()
