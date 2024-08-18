@@ -5,7 +5,7 @@ st.title('OCEAN Test App')
 
 if st.button("Read more on this Topic"):
         st.switch_page("pages/further_reading.py")
-if st.button("Documentation and code for webapp"):
+if st.button("Documentation and code"):
     st.switch_page("pages/app_docs.py")
 
 st.divider()
@@ -265,7 +265,7 @@ with tab2:
 st.divider()
 if st.button("Read more on this Topic"):
         st.switch_page("pages/further_reading.py")
-if st.button("Documentation and code for webapp"):
+if st.button("Documentation and code"):
     st.switch_page("pages/app_docs.py")
 
 st.error("◀️ Check the Sidebar for addition reading on the Big Five Model")
