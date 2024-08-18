@@ -16,6 +16,10 @@ st.markdown("""
 
 """)
 
+st.divider()
+
+st.write('Importing the Dataset')
+
 code = '''
     try:
         data = pd.read_csv("OCEAN_questions.csv")
@@ -25,3 +29,5 @@ code = '''
         exit()
     '''
 st.code(code, language="python")
+
+st.divider()
