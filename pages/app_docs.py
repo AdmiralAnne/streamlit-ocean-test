@@ -42,6 +42,10 @@ st.divider()
 
 st.write('**Displaying the questions**')
 
+st.write("""
+**all_answers dictionary** : The user responses are stored in this dictionary, with the question ID as the key and the selected answer as the value. We Iterate through all the questions (row items) and print it, with 5 options.
+""")
+
 code1 = '''
     all_answers = {}
     for index, row in questions.iterrows():
@@ -59,3 +63,25 @@ code1 = '''
     all_answers[question_id] = answer
     '''
 st.code(code1, language="python")
+
+st.divider()
+
+st.write('**Converting Responses to a DataFrame**')
+
+st.write("""
+Now we need to convert the dict from the above step, into a proper dataframe. This custom function **dict_to_dataframe()** takes a dictionary as input and converts it into a Pandas DataFrame, it's just easier to work with dfs.
+""")
+
+code2 = '''
+    def dict_to_dataframe(data_dict):
+    # Convert the dictionary to a list of tuples
+    data = [(k, v) for k, v in data_dict.items()]
+    # Create a DataFrame from the list of tuples
+    df = pd.DataFrame(data, columns=['ID', 'answer'])
+    return df
+
+    answers_df = dict_to_dataframe(all_answers)
+    '''
+st.code(code2, language="python")
+
+st.divider()
