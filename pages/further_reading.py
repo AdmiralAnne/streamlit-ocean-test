@@ -29,7 +29,7 @@ st.markdown("""
    A more academic dive into the philosophical underpinnings and applications of the Big Five Personality Model.
 
 7. **[Fetzer Institute - Big Five Inventory (BFI) PDF](https://fetzer.org/sites/default/files/images/stories/pdf/selfmeasures/Personality-BigFiveInventory.pdf)**  
-   A detailed document that outlines the methodology and logic behind the Big Five Inventory (BFI) test.
+   A document that outlines the methodology and logic behind the Big Five Inventory (BFI) test.
 
 """)
 
@@ -39,7 +39,7 @@ st.divider()
 # Further Recommendations and Features
 st.markdown("""
 ### Additional Reading:
-For those looking to dive deeper into the science behind the Big Five model, here are a few more recommendations:
+If you're looking to dive deeper into the science of personality psychology, here are a few more recommendations:
 - **[Handbook of Psychology, Volume 5, Personality and Social Psychology](https://www.pdfdrive.com/handbook-of-psychology-volume-5-personality-and-social-psychology-e20888869.html)**
 - **[Me, Myself, and Us: The Science of Personality and the Art of Well-Being](https://www.pdfdrive.com/me-myself-and-us-the-science-of-personality-and-the-art-of-well-being-e166433821.html)**
 - **more coming soon**
