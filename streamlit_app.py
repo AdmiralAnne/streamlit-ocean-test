@@ -51,14 +51,6 @@ def dict_to_dataframe(data_dict):
 
 answers_df = dict_to_dataframe(all_answers)
 
-# Define reverse score questions for each factor
-reverse_questions = {
-    'Extraversion': [2, 5, 7, 9],
-    'Neuroticism': [11, 14, 16],
-    'Openness': [18, 22, 24, 25],
-    'Agreeableness': [26, 28, 31, 33],
-    'Conscientiousness': [35, 37, 38, 41]
-}
 
 # Function to reverse score values
 def reverse_score(value):

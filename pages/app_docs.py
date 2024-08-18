@@ -85,3 +85,16 @@ code2 = '''
 st.code(code2, language="python")
 
 st.divider()
+
+st.write('**Scoring the OCEAN Traits**')
+
+st.write("""
+    All we did here was store the IDS of the
+""")
+
+code3 = '''
+    
+    '''
+st.code(code3, language="python")
+
+st.divider()
