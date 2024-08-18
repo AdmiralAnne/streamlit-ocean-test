@@ -219,6 +219,8 @@ with st.expander("Raw Data, if you are interested"):
         st.switch_page("streamlit_app.py")
     if st.button("Read more"):
         st.switch_page("pages/further_reading.py")
+    if st.button("Docs"):
+        st.switch_page("pages/app_docs.py")
   
 with st.sidebar:
     st.success('Navigate to more pages using the above links ⬆️')
