@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title("Run-through of how we build this app (It's preety simple, and straight forward 📏)")
+st.subheader("Run-through of how we build this app (It's preety simple, and straight forward 📏)")
 
 st.info("I'll take you through the step-by-step process of how we built this app using Streamlit and Python.")
 
