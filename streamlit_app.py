@@ -248,7 +248,7 @@ tab1, tab2 = st.tabs(["Score Table", "Insights"])
 
 with tab1:
     scores_df
-    facets_df
+    # facets_df # facets are a work in progress so ignore this for now, thank you
 
 with tab2:
     for index, row in scores_df.iterrows():
