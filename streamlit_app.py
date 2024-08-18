@@ -136,7 +136,9 @@ def calculate_facet_scores(df):
     }
 
 facet_scores = calculate_facet_scores(answers_df)
+facet_scores
 facets_df = dict_to_dataframe(facet_scores)
+facets_df
 new_columns = ['Trait', 'Score']
 facets_df.columns = new_columns
 
