@@ -21,47 +21,33 @@ except FileNotFoundError:
   exit()
 
 
-# Pagination setup
-questions_per_page = 5
-total_pages = (len(questions) - 1) // questions_per_page + 1
-current_page = st.session_state.get('current_page', 1)
-
-# Display questions for the current page
+# Display questions with radio buttons
 all_answers = {}
-start_index = (current_page - 1) * questions_per_page
-end_index = start_index + questions_per_page
-current_questions = questions.iloc[start_index:end_index]
+for index, row in questions.iterrows():
+  question_id = row['ID']
+  question_text = row['question']
+  answer = st.radio(f"Question {question_id}: **{question_text}**", options=[1, 2, 3, 4, 5],
+                     captions=[
+                         "Disagree strongly",
+                         "Disagree a little",
+                         "Neither agree nor disagree",
+                         "Agree a little",
+                         "Agree strongly"
+                     ],
+                     horizontal=False, key=question_id)
+  all_answers[question_id] = answer
 
-for index, row in current_questions.iterrows():
-    question_id = row['ID']
-    question_text = row['question']
-    answer = st.radio(f"Question {question_id}: **{question_text}**", options=[1, 2, 3, 4, 5],
-                      captions=[
-                          "Disagree strongly",
-                          "Disagree a little",
-                          "Neither agree nor disagree",
-                          "Agree a little",
-                          "Agree strongly"
-                      ],
-                      horizontal=False, key=question_id)
-    all_answers[question_id] = answer
+# questions
+# data
+# all_answers
 
-# Navigation buttons
-if current_page > 1:
-    if st.button("Previous"):
-        st.session_state['current_page'] = current_page - 1
-        st.experimental_rerun()
-
-if current_page < total_pages:
-    if st.button("Next"):
-        st.session_state['current_page'] = current_page + 1
-        st.experimental_rerun()
-
-# Convert dictionary to DataFrame
 def dict_to_dataframe(data_dict):
-    data = [(k, v) for k, v in data_dict.items()]
-    df = pd.DataFrame(data, columns=['ID', 'answer'])
-    return df
+  # Convert the dictionary to a list of tuples
+  data = [(k, v) for k, v in data_dict.items()]
+  # Create a DataFrame from the list of tuples
+  df = pd.DataFrame(data, columns=['ID', 'answer'])
+  return df
+
 
 answers_df = dict_to_dataframe(all_answers)
 
@@ -84,10 +70,10 @@ def calculate_ocean_scores(df):
                           df[df['ID'].isin([2, 5, 7, 9])]['answer'].apply(reverse_score).sum())
 
     neuroticism_score = (df[df['ID'].isin([10, 12, 13, 15, 17])]['answer'].sum() +
-                         df[df['ID'].isin([11, 14, 16])]['answer'].apply(reverse_score).sum())
+                           df[df['ID'].isin([11, 14, 16])]['answer'].apply(reverse_score).sum())
 
     openness_score = (df[df['ID'].isin([19, 20, 21, 23])]['answer'].sum() +
-                      df[df['ID'].isin([18, 22, 24, 25])]['answer'].apply(reverse_score).sum())
+                       df[df['ID'].isin([18, 22, 24, 25])]['answer'].apply(reverse_score).sum())
 
     agreeableness_score = (df[df['ID'].isin([27, 29, 30, 32])]['answer'].sum() +
                            df[df['ID'].isin([26, 28, 31, 33])]['answer'].apply(reverse_score).sum())
@@ -96,12 +82,12 @@ def calculate_ocean_scores(df):
                                df[df['ID'].isin([35, 37, 38, 41])]['answer'].apply(reverse_score).sum())
 
     return {
-        'Openness': openness_score,
-        'Conscientiousness': conscientiousness_score,
-        'Extraversion': extraversion_score,
-        'Agreeableness': agreeableness_score,
-        'Neuroticism': neuroticism_score
-    }
+            'Openness': openness_score,
+            'Conscientiousness': conscientiousness_score,
+            'Extraversion': extraversion_score,
+            'Agreeableness': agreeableness_score,
+            'Neuroticism': neuroticism_score
+            }
 
 ocean_scores = calculate_ocean_scores(answers_df)
 scores_df = dict_to_dataframe(ocean_scores)
