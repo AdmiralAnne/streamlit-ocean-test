@@ -89,33 +89,33 @@ scores_df.columns = new_columns
 def calculate_facet_scores(df):
     sociability_score = (answers_df[answers_df['ID'] == 1]['answer'].sum() +
                      answers_df[answers_df['ID'] == 16]['answer'].apply(reverse_score).sum())
-    assertiveness_score = (answers_df[answers_df['ID'] == 6]['answer'].sum() -
+    assertiveness_score = (answers_df[answers_df['ID'] == 6]['answer'].sum() +
                         answers_df[answers_df['ID'] == 21]['answer'].apply(reverse_score).sum())
-    energy_level_score = (answers_df[answers_df['ID'] == 11]['answer'].sum() -
+    energy_level_score = (answers_df[answers_df['ID'] == 11]['answer'].sum() +
                       answers_df[answers_df['ID'] == 26]['answer'].apply(reverse_score).sum())
-    compassion_score = (answers_df[answers_df['ID'] == 2]['answer'].sum() -
+    compassion_score = (answers_df[answers_df['ID'] == 2]['answer'].sum() +
                     answers_df[answers_df['ID'] == 17]['answer'].apply(reverse_score).sum())
-    respectfulness_score = (answers_df[answers_df['ID'] == 7]['answer'].sum() -
+    respectfulness_score = (answers_df[answers_df['ID'] == 7]['answer'].sum() +
                         answers_df[answers_df['ID'] == 22]['answer'].apply(reverse_score).sum())
-    trust_score = (answers_df[answers_df['ID'] == 12]['answer'].sum() -
+    trust_score = (answers_df[answers_df['ID'] == 12]['answer'].sum() +
                answers_df[answers_df['ID'] == 27]['answer'].apply(reverse_score).sum())
-    organization_score = (answers_df[answers_df['ID'] == 3]['answer'].sum() -
+    organization_score = (answers_df[answers_df['ID'] == 3]['answer'].sum() +
                       answers_df[answers_df['ID'] == 18]['answer'].apply(reverse_score).sum())
-    productiveness_score = (answers_df[answers_df['ID'] == 8]['answer'].sum() -
+    productiveness_score = (answers_df[answers_df['ID'] == 8]['answer'].sum() +
                         answers_df[answers_df['ID'] == 23]['answer'].apply(reverse_score).sum())
-    responsibility_score = (answers_df[answers_df['ID'] == 13]['answer'].sum() -
+    responsibility_score = (answers_df[answers_df['ID'] == 13]['answer'].sum() +
                         answers_df[answers_df['ID'] == 28]['answer'].apply(reverse_score).sum())
-    anxiety_score = (answers_df[answers_df['ID'] == 4]['answer'].sum() -
+    anxiety_score = (answers_df[answers_df['ID'] == 4]['answer'].sum() +
                  answers_df[answers_df['ID'] == 19]['answer'].apply(reverse_score).sum())
-    depression_score = (answers_df[answers_df['ID'] == 9]['answer'].sum() -
+    depression_score = (answers_df[answers_df['ID'] == 9]['answer'].sum() +
                     answers_df[answers_df['ID'] == 24]['answer'].apply(reverse_score).sum())
-    emotional_volatility_score = (answers_df[answers_df['ID'] == 14]['answer'].sum() -
+    emotional_volatility_score = (answers_df[answers_df['ID'] == 14]['answer'].sum() +
                                answers_df[answers_df['ID'] == 29]['answer'].apply(reverse_score).sum())
-    aesthetic_sensitivity_score = (answers_df[answers_df['ID'] == 5]['answer'].sum() -
+    aesthetic_sensitivity_score = (answers_df[answers_df['ID'] == 5]['answer'].sum() +
                                 answers_df[answers_df['ID'] == 20]['answer'].apply(reverse_score).sum())
-    intellectual_curiosity_score = (answers_df[answers_df['ID'] == 10]['answer'].sum() -
+    intellectual_curiosity_score = (answers_df[answers_df['ID'] == 10]['answer'].sum() +
                                  answers_df[answers_df['ID'] == 25]['answer'].apply(reverse_score).sum())
-    creative_imagination_score = (answers_df[answers_df['ID'] == 15]['answer'].sum() -
+    creative_imagination_score = (answers_df[answers_df['ID'] == 15]['answer'].sum() +
                                answers_df[answers_df['ID'] == 30]['answer'].apply(reverse_score).sum())
     return {
         'sociability_score':sociability_score,
@@ -136,10 +136,8 @@ def calculate_facet_scores(df):
     }
 
 facet_scores = calculate_facet_scores(answers_df)
-facet_scores
 facets_df = dict_to_dataframe(facet_scores)
-facets_df
-new_columns = ['Trait', 'Score']
+new_columns = ['Facet', 'Score']
 facets_df.columns = new_columns
 
 # Function to get the interpretation based on the score
