@@ -216,3 +216,10 @@ with st.expander("Raw Data, if you are interested"):
   
 with st.sidebar:
     st.success('Navigate to more pages using the above links ⬆️')
+    st.text(" ")
+    st.info("**Follow us on social media:**")
+    st.markdown("""
+    - [Instagram](https://www.instagram.com/marjijamir)
+    - [LinkedIn](https://www.linkedin.com/feed/)
+    - [Github](https://github.com/AdmiralAnne)
+    """)

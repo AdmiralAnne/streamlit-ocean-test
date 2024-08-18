@@ -51,18 +51,10 @@ For those looking to dive deeper into the science behind the Big Five model, her
 # Sidebar with navigation and further links
 with st.sidebar:
     st.success('Navigate through the sections above ⬆️')
-    st.markdown("**Recommended Pages:**")
-    st.markdown("""
-    - [Home](#)
-    - [Take the Test](#)
-    - [Score Interpretation](#)
-    - [About the Big Five](#)
-    - [Contact Us](#)
-    """)
     st.text(" ")
     st.info("**Follow us on social media:**")
     st.markdown("""
-    - [Twitter](https://twitter.com/)
-    - [LinkedIn](https://linkedin.com/)
-    - [Facebook](https://facebook.com/)
+    - [Instagram](https://www.instagram.com/marjijamir)
+    - [LinkedIn](https://www.linkedin.com/feed/)
+    - [Github](https://github.com/AdmiralAnne)
     """)

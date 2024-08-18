@@ -181,3 +181,14 @@ st.divider()
 st.info("That's preety much it, it's a simple program wiht little to no complexity but the scores we attain from this test can further help us to create an even more comprehensive Interpretation - such as Personalized advice, Jobs Recommendation, Techniques to get better at certain traits if you wish etc. . .")
 
 st.success("Ciao! Special thanks to the entire team who helped bring this project to life!")
+
+
+with st.sidebar:
+    st.success('Navigate through the sections above ⬆️')
+    st.text(" ")
+    st.info("**Follow us on social media:**")
+    st.markdown("""
+    - [Instagram](https://www.instagram.com/marjijamir)
+    - [LinkedIn](https://www.linkedin.com/feed/)
+    - [Github](https://github.com/AdmiralAnne)
+    """)
