@@ -19,7 +19,8 @@ st.divider()
 st.write('Importing the Dataset')
 
 st.text("""
-We needed a set of predefined questions. We stored these questions in a CSV file named OCEAN_questions.csv. The dataset is then imported using Pandas' pd.read_csv() function, which reads the CSV file into a DataFrame.
+We needed a set of predefined questions. We stored these questions in a CSV file named OCEAN_questions.csv. 
+The dataset is then imported using Pandas' pd.read_csv() function, which reads the CSV file into a DataFrame.
 """)
 st.markdown(""" Source of questions can be found here:
 [Online Library Wiley Pdf](https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781118638279.app1)
