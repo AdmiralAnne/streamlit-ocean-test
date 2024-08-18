@@ -86,6 +86,60 @@ scores_df = dict_to_dataframe(ocean_scores)
 new_columns = ['Trait', 'Score']
 scores_df.columns = new_columns
 
+def calculate_facet_scores(df):
+    sociability_score = (answers_df[answers_df['ID'] == 1]['answer'].sum() +
+                     answers_df[answers_df['ID'] == 16]['answer'].apply(reverse_score).sum())
+    assertiveness_score = (answers_df[answers_df['ID'] == 6]['answer'].sum() -
+                        answers_df[answers_df['ID'] == 21]['answer'].apply(reverse_score).sum())
+    energy_level_score = (answers_df[answers_df['ID'] == 11]['answer'].sum() -
+                      answers_df[answers_df['ID'] == 26]['answer'].apply(reverse_score).sum())
+    compassion_score = (answers_df[answers_df['ID'] == 2]['answer'].sum() -
+                    answers_df[answers_df['ID'] == 17]['answer'].apply(reverse_score).sum())
+    respectfulness_score = (answers_df[answers_df['ID'] == 7]['answer'].sum() -
+                        answers_df[answers_df['ID'] == 22]['answer'].apply(reverse_score).sum())
+    trust_score = (answers_df[answers_df['ID'] == 12]['answer'].sum() -
+               answers_df[answers_df['ID'] == 27]['answer'].apply(reverse_score).sum())
+    organization_score = (answers_df[answers_df['ID'] == 3]['answer'].sum() -
+                      answers_df[answers_df['ID'] == 18]['answer'].apply(reverse_score).sum())
+    productiveness_score = (answers_df[answers_df['ID'] == 8]['answer'].sum() -
+                        answers_df[answers_df['ID'] == 23]['answer'].apply(reverse_score).sum())
+    responsibility_score = (answers_df[answers_df['ID'] == 13]['answer'].sum() -
+                        answers_df[answers_df['ID'] == 28]['answer'].apply(reverse_score).sum())
+    anxiety_score = (answers_df[answers_df['ID'] == 4]['answer'].sum() -
+                 answers_df[answers_df['ID'] == 19]['answer'].apply(reverse_score).sum())
+    depression_score = (answers_df[answers_df['ID'] == 9]['answer'].sum() -
+                    answers_df[answers_df['ID'] == 24]['answer'].apply(reverse_score).sum())
+    emotional_volatility_score = (answers_df[answers_df['ID'] == 14]['answer'].sum() -
+                               answers_df[answers_df['ID'] == 29]['answer'].apply(reverse_score).sum())
+    aesthetic_sensitivity_score = (answers_df[answers_df['ID'] == 5]['answer'].sum() -
+                                answers_df[answers_df['ID'] == 20]['answer'].apply(reverse_score).sum())
+    intellectual_curiosity_score = (answers_df[answers_df['ID'] == 10]['answer'].sum() -
+                                 answers_df[answers_df['ID'] == 25]['answer'].apply(reverse_score).sum())
+    creative_imagination_score = (answers_df[answers_df['ID'] == 15]['answer'].sum() -
+                               answers_df[answers_df['ID'] == 30]['answer'].apply(reverse_score).sum())
+    return {
+        'sociability_score':sociability_score,
+        'assertiveness_score':assertiveness_score,
+        'energy_level_score':energy_level_score,
+        'compassion_score':compassion_score,
+        'respectfulness_score':respectfulness_score,
+        'trust_score':trust_score,
+        'organization_score':organization_score,
+        'productiveness_score':productiveness_score,
+        'responsibility_score':responsibility_score,
+        'anxiety_score':anxiety_score,
+        'depression_score':depression_score,
+        'emotional_volatility_score':emotional_volatility_score,
+        'aesthetic_sensitivity_score':aesthetic_sensitivity_score,
+        'intellectual_curiosity_score':intellectual_curiosity_score,
+        'creative_imagination_score':creative_imagination_score
+    }
+
+facet_scores = calculate_facet_scores(answers_df)
+facets_df = dict_to_dataframe(facet_scores)
+new_columns = ['Trait', 'Score']
+facets_df.columns = new_columns
+
 # Function to get the interpretation based on the score
 def get_interpretation(trait, score):
     if trait == "Openness":
@@ -194,6 +248,7 @@ tab1, tab2 = st.tabs(["Score Table", "Insights"])
 
 with tab1:
     scores_df
+    facets_df
 
 with tab2:
     for index, row in scores_df.iterrows():
