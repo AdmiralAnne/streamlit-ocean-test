@@ -10,9 +10,18 @@ st.divider()
 st.subheader("Setting Up the Streamlit App")
 st.markdown("""
 
-1. Login to streamlit, create a new app and link it to your existing GitHub Repository.
-2. That's preety much it.
-3. Ah yes, dont't forget to install the dependencies from requirements.txt.
+1.Login to streamlit, create a new app and link it to your existing GitHub Repository.
+2.That's preety much it.
+3.Ah yes, dont't forget to install the dependencies from requirements.txt.
 
 """)
 
+code = '''
+    try:
+        data = pd.read_csv("OCEAN_questions.csv")
+        questions = data.loc[:, ["ID", "question", "choice"]]
+    except FileNotFoundError:
+        st.error("Error: 'OCEAN_questions.csv' file not found. Please ensure the file exists in the same directory as your script.")
+        exit()
+    '''
+st.code(code, language="python")
