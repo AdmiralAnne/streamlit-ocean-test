@@ -263,9 +263,9 @@ with tab2:
     st.info("**Remember:** These are general guidelines and **individual differences** exist. Let this serve as a high level overview of your traits, not a one stop solution.")
 
 st.divider()
-if st.button("Read more on this Topic"):
+if st.button("Read more on this Topi c"):
         st.switch_page("pages/further_reading.py")
-if st.button("Documentation and code"):
+if st.button("Documentation and cod e"):
     st.switch_page("pages/app_docs.py")
 
 st.error("◀️ Check the Sidebar for addition reading on the Big Five Model")
