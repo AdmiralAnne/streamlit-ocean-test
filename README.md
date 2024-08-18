@@ -7,13 +7,19 @@ Provides a Simplified analysis of your personality based on the Big Five persona
 2. **Install Libraries:** Ensure you have `streamlit`, `pandas`, and `numpy` installed (e.g., `pip install streamlit pandas numpy`).
 3. **Run the App:** Execute `streamlit run main.py` (replace `main.py` with your script name) in your terminal.
 4. **Run in on the cloud** Create a [streamlit.io](https://streamlit.io/) account and run in on the clodud.
-   
-## Demo App
+```bash
+pip install -r requirements.txt
+```
 
 ```bash
 pip install streamlit pandas
-
 ```
+
+```bash
+streamlit run main.py
+```
+   
+## Demo App
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://marji-ocean-test.streamlit.app/)
 
