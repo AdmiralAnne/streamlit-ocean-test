@@ -3,10 +3,7 @@ import streamlit as st
 # Success Message
 st.success("Explore a curated collection of resources and links to deepen your understanding of the Big Five model.")
 
-# Introductory Text
-st.markdown("""
-The Big Five Personality Model, also known as the OCEAN model, is a widely researched framework that describes human personality through five broad dimensions: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism. Below, you'll find a list of useful articles, websites, and tools that provide valuable insights into these traits, as well as how they can be applied in various contexts like personal development, career growth, and mental health.
-""")
+
 
 # Resource List
 st.markdown("""
