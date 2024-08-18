@@ -7,7 +7,7 @@ st.info("I'll take you through the step-by-step process of how we built this app
 
 st.divider()
 
-st.write("Setting Up the Streamlit App")
+st.write("**Setting Up the Streamlit App**")
 st.markdown("""
 - Login to streamlit, create a new app and link it to your existing GitHub Repository.
 - That's preety much it.
@@ -16,7 +16,7 @@ st.markdown("""
 
 st.divider()
 
-st.write('Importing the Dataset')
+st.write('**Importing the Dataset**')
 
 st.text("""
 We needed a set of predefined questions. 
