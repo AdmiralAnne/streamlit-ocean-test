@@ -43,9 +43,9 @@ st.divider()
 st.markdown("""
 ### Additional Reading:
 For those looking to dive deeper into the science behind the Big Five model, here are a few more recommendations:
-- **[Psychological Testing: Principles and Applications](https://www.amazon.com/Psychological-Testing-Principles-Applications/dp/0131891723)**: This book provides a broader context for psychological assessments, including the Big Five.
-- **[Personality: Theory and Research](https://www.amazon.com/Personality-Theory-Research-Daniel-Cervone/dp/1119505405)**: A textbook offering an in-depth analysis of personality theories, including the Big Five.
-- **[The Handbook of Personality: Theory and Research](https://www.amazon.com/Handbook-Personality-Theory-Research-PsycINFO/dp/1606230293)**: A must-read for anyone interested in the latest research on personality psychology.
+- **[Handbook of Psychology, Volume 5, Personality and Social Psychology](https://www.pdfdrive.com/handbook-of-psychology-volume-5-personality-and-social-psychology-e20888869.html)**
+- **[Me, Myself, and Us: The Science of Personality and the Art of Well-Being](https://www.pdfdrive.com/me-myself-and-us-the-science-of-personality-and-the-art-of-well-being-e166433821.html)**
+- **more coming soon**
 """)
 
 # Sidebar with navigation and further links
