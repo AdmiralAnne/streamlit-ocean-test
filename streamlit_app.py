@@ -3,6 +3,13 @@ import pandas as pd
 
 st.title('OCEAN Test App')
 
+if st.button("Read more on this Topic"):
+        st.switch_page("pages/further_reading.py")
+if st.button("Documentation and code for webapp"):
+    st.switch_page("pages/app_docs.py")
+
+st.divider()
+
 st.info("""
 Get insights into your characteristic traits according to the Big Five model
 
@@ -255,6 +262,12 @@ with tab2:
         get_interpretation(row['Trait'], row['Score'])
     st.info("**Remember:** These are general guidelines and **individual differences** exist. Let this serve as a high level overview of your traits, not a one stop solution.")
 
+st.divider()
+if st.button("Read more on this Topic"):
+        st.switch_page("pages/further_reading.py")
+if st.button("Documentation and code for webapp"):
+    st.switch_page("pages/app_docs.py")
+
 st.error("◀️ Check the Sidebar for addition reading on the Big Five Model")
 
 with st.expander("Raw Data, if you are interested"):
@@ -264,10 +277,7 @@ with st.expander("Raw Data, if you are interested"):
     ocean_scores
     if st.button("Home"):
         st.switch_page("streamlit_app.py")
-    if st.button("Read more"):
-        st.switch_page("pages/further_reading.py")
-    if st.button("Docs"):
-        st.switch_page("pages/app_docs.py")
+    
   
 with st.sidebar:
     st.success('Navigate to more pages using the above links ⬆️')
