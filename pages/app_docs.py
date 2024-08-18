@@ -9,11 +9,9 @@ st.divider()
 
 st.subheader("Setting Up the Streamlit App")
 st.markdown("""
-
-1.Login to streamlit, create a new app and link it to your existing GitHub Repository.
-2.That's preety much it.
-3.Ah yes, dont't forget to install the dependencies from requirements.txt.
-
+1. Login to streamlit, create a new app and link it to your existing GitHub Repository.
+2. That's preety much it.
+3. Ah yes, dont't forget to install the dependencies from requirements.txt.
 """)
 
 st.divider()
