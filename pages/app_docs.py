@@ -155,3 +155,29 @@ code4 = '''
 st.code(code4, language="python")
 
 st.divider()
+
+st.write("Tabbed Layout and Sidebar")
+
+st.write("Create 2 tabs, one for the results table and another one for the interpretations.")
+
+code5 = '''
+    tab1, tab2 = st.tabs(["Score Table", "Insights"])
+
+    with tab1:
+        scores_df
+
+    with tab2:
+        for index, row in scores_df.iterrows():
+            get_interpretation(row['Trait'], row['Score'])
+        st.info("**Remember:** These are general guidelines and **individual differences** exist. Let this serve as a high level overview of    your traits, not a one stop solution.")
+
+    with st.sidebar:
+        st.success('Navigate to more pages using the above links ⬆️')
+    '''
+st.code(code5, language="python")
+
+st.divider()
+
+st.info("That's preety much it, it's a simple program wiht little to no complexity but the scores we attain from this test can further help us to create an even more comprehensive Interpretation - such as Personalized advice, Jobs Recommendation, Techniques to get better at certain traits if you wish etc. . .")
+
+st.exception("Ciao! Special thanks to the entire team who helped bring this project to life!")
