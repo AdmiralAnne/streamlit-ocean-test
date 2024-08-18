@@ -7,7 +7,7 @@ st.info("I'll take you through the step-by-step process of how we built this app
 
 st.divider()
 
-st.subheader("Setting Up the Streamlit App")
+st.write("Setting Up the Streamlit App")
 st.markdown("""
 - Login to streamlit, create a new app and link it to your existing GitHub Repository.
 - That's preety much it.
@@ -17,6 +17,11 @@ st.markdown("""
 st.divider()
 
 st.write('Importing the Dataset')
+
+st.info("We needed a set of predefined questions. We stored these questions in a CSV file named OCEAN_questions.csv. The dataset is then imported using Pandas' pd.read_csv() function, which reads the CSV file into a DataFrame.")
+st.markdown(""" Source of questions can be found here:
+[Online Library Wiley Pdf](https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781118638279.app1)
+""")
 
 code = '''
     try:
