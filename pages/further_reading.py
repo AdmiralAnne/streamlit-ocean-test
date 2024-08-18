@@ -1,8 +1,5 @@
 import streamlit as st
 
-# Page Title
-st.title("Further Reading and Resources on the Big Five Personality Model")
-
 # Success Message
 st.success("Explore a curated collection of resources and links to deepen your understanding of the Big Five model.")
 
@@ -49,14 +46,6 @@ For those looking to dive deeper into the science behind the Big Five model, her
 - **[Psychological Testing: Principles and Applications](https://www.amazon.com/Psychological-Testing-Principles-Applications/dp/0131891723)**: This book provides a broader context for psychological assessments, including the Big Five.
 - **[Personality: Theory and Research](https://www.amazon.com/Personality-Theory-Research-Daniel-Cervone/dp/1119505405)**: A textbook offering an in-depth analysis of personality theories, including the Big Five.
 - **[The Handbook of Personality: Theory and Research](https://www.amazon.com/Handbook-Personality-Theory-Research-PsycINFO/dp/1606230293)**: A must-read for anyone interested in the latest research on personality psychology.
-
-### Features Coming Soon:
-- **Advanced Insights**: We are working on a new section that will provide more nuanced interpretations of your Big Five scores, tailored to specific contexts such as leadership, teamwork, and creativity.
-- **Customized Recommendations**: Get personalized recommendations on books, articles, and exercises based on your Big Five profile.
-- **Peer Comparisons**: See how your scores compare with those of different groups, including professionals in various industries.
-
-### Stay Updated:
-Subscribe to our newsletter to stay informed about new features and updates to the app.
 """)
 
 # Sidebar with navigation and further links
